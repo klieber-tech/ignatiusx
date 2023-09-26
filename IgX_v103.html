@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<!-- LUC Fa2023 Markup Languages Project - v 1.0.3 -->
+
+<!-- IgX version 1.0.3 - 
+	added persistence of entries
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Research Proposal Creator</title>
+    <style>
+            body {
+      background-color: tan;
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+    }
+    .header {
+      background-color: blue; /* Blue background */
+      color: white; /* White text */
+      padding: 1em; /* Padding around text */
+      text-align: center; /* Center the text */
+    }
+		
+    </style>
+</head>
+<body>
+	
+	<div class="header"> 
+    <h1>IgnatiusX - Research Proposal Creator v 1.0.3</h1>
+  </div>
+
+  <div style="padding: 1em; text-align: center;">
+    <h2>Enter and save your research proposals here</h2>
+    <img src="https://luc2023fall.s3.us-east-2.amazonaws.com/research-homepage_Internet.jpg" alt="Research Proposal Image">
+  </div>
+	
+
+    <!-- Form for data input -->
+	<!-- FORM FORM FORM FORM FORM FORM -->
+	
+<form id="proposalForm">
+    <table>
+        <tr>
+            <td><label for="proposalID">Proposal ID:</label></td>
+            <td><input type="text" id="proposalID" name="proposalID" required></td>
+        </tr>
+        <tr>
+            <td><label for="title">Title:</label></td>
+            <td><input type="text" id="title" name="title" required maxlength="255"></td>
+        </tr>
+        <tr>
+            <td><label for="researcherName">Researcher Name:</label></td>
+            <td><input type="text" id="researcherName" name="researcherName" required></td>
+        </tr>
+        <tr>
+            <td><label for="fundingAmount">Funding Amount:</label></td>
+            <td><input type="number" id="fundingAmount" name="fundingAmount" required min="1"></td>
+        </tr>
+        <tr>
+            <td><label for="status">Status:</label></td>
+            <td>
+                <select id="status" name="status" required>
+                    <option value="Draft">Draft</option>
+                    <option value="Submitted">Submitted</option>
+                    <option value="Approved">Approved</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+            </td>
+        </tr>
+	<tr>
+    <td><label for="abstract">Abstract:</label></td>
+    <td>
+        <textarea id="abstract" name="abstract" rows="4" cols="50" required></textarea>
+        <br>
+        <small>One or two paragraphs that summarize what you will do in the research project and how you will do it.</small>
+    </td>
+</tr>
+
+    </table>
+	
+	<input type="submit" value="Add Proposal">
+	
+</form>
+
+	<!-- End of form -->
+
+
+    <!-- Table for displaying data -->
+    <table id="proposalTable">
+        <thead>
+            <tr>
+                <th>Proposal ID</th>
+                <th>Title</th>
+                <th>Researcher Name</th>
+                <th>Funding Amount</th>
+				<th>Status</th>
+				<th>Abstract</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be inserted here dynamically -->
+        </tbody>
+    </table>
+
+	
+<script>
+    // JavaScript for handling form submissions and data persistence
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById("proposalForm");
+        const table = document.getElementById("proposalTable").getElementsByTagName("tbody")[0];
+        
+        // New code to populate table from localStorage upon page load
+        // START OF NEW PERSISTENCE CODE
+        function populateTableFromStorage() {
+            const storedData = JSON.parse(localStorage.getItem('proposalData')) || [];
+            storedData.forEach(data => {
+                const newRow = table.insertRow();
+                Object.values(data).forEach(value => {
+                    const cell = newRow.insertCell();
+                    cell.textContent = value;
+                    cell.style.textAlign = "left";
+                });
+                addSeparatorRow();
+            });
+        }
+        populateTableFromStorage();
+        // END OF NEW PERSISTENCE CODE
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const formData = new FormData(form);
+            const newRow = table.insertRow();
+            const rowObject = {}; // For persistence
+
+            // Iterating over each form field to populate the table
+            for (let [key, value] of formData.entries()) {
+                const cell = newRow.insertCell();
+                cell.textContent = value;
+                cell.style.textAlign = "left";
+                
+                rowObject[key] = value; // For persistence
+            }
+            
+            // New code to add the entry to localStorage
+            // START OF NEW PERSISTENCE CODE
+            const storedData = JSON.parse(localStorage.getItem('proposalData')) || [];
+            storedData.push(rowObject);
+            localStorage.setItem('proposalData', JSON.stringify(storedData));
+            // END OF NEW PERSISTENCE CODE
+
+            addSeparatorRow();
+        });
+
+        // Function to add separator row
+        function addSeparatorRow() {
+            // Create a new row for the horizontal line
+            const separatorRow = table.insertRow();
+            const separatorCell = separatorRow.insertCell();
+
+            // Make the cell span the entire width of the table
+            separatorCell.colSpan = "6"; 
+            
+            // Add a border to create the line
+            separatorCell.style.borderTop = "1px solid #000";
+        }
+    });
+</script>
+
+
+	
+</body>
+</html>
