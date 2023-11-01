@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+    <title>Research Proposal Helper</title>
+	
+	    <style>
+        li {
+            margin-bottom: 20px;
+        }
+    </style>
+	
+	
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById('researchForm');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const keywords = document.getElementById('keywords').value;
+                fetchPapers(keywords);
+            });
+        });
+
+        function fetchPapers(keywords) {
+            const query = encodeURIComponent(keywords);
+            const url = `http://export.arxiv.org/api/query?search_query=all:${query}&start=0&max_results=3`;
+			
+            
+            fetch(url)
+            .then(response => response.text())
+            .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+            .then(data => {
+                const entries = data.querySelectorAll("entry");
+                const paperList = document.getElementById('paperList');
+                paperList.innerHTML = '';
+                
+                entries.forEach((entry, index) => {
+                    const title = entry.querySelector("title").textContent;
+                    const summary = entry.querySelector("summary").textContent;
+                    const id = entry.querySelector("id").textContent;
+                    const published = entry.querySelector("published").textContent;
+                    const updated = entry.querySelector("updated").textContent;
+                    const author = entry.querySelector("author name").textContent;
+                    const link = entry.querySelector("link[title='pdf']").getAttribute("href");
+                    const category = entry.querySelector("category").getAttribute("term");
+                    const journalRef = entry.querySelector("journal_ref") ? entry.querySelector("journal_ref").textContent : "N/A";
+                    const comment = entry.querySelector("comment") ? entry.querySelector("comment").textContent : "N/A";
+
+                    const paperItem = document.createElement('li');
+                    paperItem.innerHTML = `
+                        <strong>Title:</strong> ${title}<br>
+                        <strong>Summary:</strong> ${summary}<br>
+                        <strong>ID:</strong> ${id}<br>
+                        <strong>Published:</strong> ${published}<br>
+                        <strong>Updated:</strong> ${updated}<br>
+                        <strong>Author:</strong> ${author}<br>
+                        <strong>Link:</strong> <a href="${link}" target="_blank">PDF</a><br>
+                        <strong>Category:</strong> ${category}<br>
+                        <strong>Journal Reference:</strong> ${journalRef}<br>
+                        <strong>Comment:</strong> ${comment}<br>
+                    `;
+                    paperList.appendChild(paperItem);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Find Relevant Research Papers</h1>
+    <form id="researchForm">
+        <label for="keywords">Enter Keywords:</label>
+        <input type="text" id="keywords" name="keywords">
+        <button type="submit">Search</button>
+    </form>
+    <h2>Relevant Papers:</h2>
+    <ol id="paperList">
+    </ol>
+</body>
+</html>

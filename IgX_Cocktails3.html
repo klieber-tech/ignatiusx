@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cocktail Finder 3</title>
+    <style>
+        #cocktailGrid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Find Your Perfect Cocktail</h1>
+    <form id="cocktailForm">
+        <label for="ingredients">Enter Ingredients:</label>
+        <input type="text" id="ingredients" name="ingredients">
+        <button type="submit">Search</button>
+    </form>
+    <h2>Top Cocktails:</h2>
+    <div id="cocktailGrid">
+        <!-- Grid items will be appended here -->
+    </div>
+    <div id="wishlist">
+        <!-- Wishlist will be displayed here -->
+    </div>
+
+    <script>
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById('cocktailForm');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const ingredients = document.getElementById('ingredients').value;
+                fetchCocktails(ingredients);
+            });
+            displayWishlist();
+        });
+
+        function fetchCocktails(ingredients) {
+            const query = encodeURIComponent(ingredients);
+            const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${query}`;
+            
+            fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const cocktails = data.drinks || [];
+                const cocktailGrid = document.getElementById('cocktailGrid');
+                cocktailGrid.innerHTML = '';
+                
+                cocktails.slice(0, 3).forEach((cocktail) => {
+                    fetchCocktailDetails(cocktail.idDrink, ingredients);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+        }
+
+        function fetchCocktailDetails(id, ingredients) {
+            const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
+            fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const details = data.drinks[0];
+                const name = details.strDrink;
+                const thumbnail = details.strDrinkThumb;
+                const glass = details.strGlass;
+                const category = details.strCategory;
+
+                const cocktailItem = document.createElement('div');
+                cocktailItem.innerHTML = `
+                    <strong>Name:</strong> ${name}<br>
+                    <img src="${thumbnail}" alt="${name}" width="100"><br>
+                    <strong>Glass:</strong> ${glass}<br>
+                    <strong>Category:</strong> ${category}<br>
+                    <button onclick="addToWishlist('${id}', '${name}', '${ingredients}')">Save to Wishlist</button>
+                `;
+                document.getElementById('cocktailGrid').appendChild(cocktailItem);
+            })
+            .catch(error => {
+                console.error('Error fetching cocktail details:', error);
+            });
+        }
+
+function addToWishlist(id, name, ingredients) {
+    console.log("Adding to wishlist:", id, name, ingredients);  // Debugging line
+    const url = `https://www.thecocktaildb.com/drink/${id}`;
+    const cocktail = { id, name, ingredients, url };
+    
+    // Check if cocktail already exists in wishlist
+    const exists = wishlist.some(item => item.id === id);
+    if (!exists) {
+        wishlist.push(cocktail);
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+        displayWishlist();
+    } else {
+        console.log("Item already exists in wishlist");  // Debugging line
+    }
+}
+
+        function displayWishlist() {
+            const wishlistDiv = document.getElementById('wishlist');
+            wishlistDiv.innerHTML = '<h3>Your Wishlist:</h3><table border="1"><tr><th>Name</th><th>ID</th><th>Keyword</th><th>Link</th></tr>';
+            wishlist.forEach((cocktail) => {
+                wishlistDiv.innerHTML += `<tr><td>${cocktail.name}</td><td>${cocktail.id}</td><td>${cocktail.ingredients}</td><td><a href="${cocktail.url}" target="_blank">View Recipe</a></td></tr>`;
+            });
+            wishlistDiv.innerHTML += '</table>';
+        }
+    </script>
+</body>
+</html>

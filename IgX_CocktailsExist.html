@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cocktail Entry Form</title>
+</head>
+<body>
+
+  <h1>Enter a New Cocktail</h1>
+
+  <form id="cocktailForm">
+    <label for="name">Cocktail Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="ingredient1">Ingredient 1:</label>
+    <input type="text" id="ingredient1" name="ingredient1"><br><br>
+
+    <label for="ingredient2">Ingredient 2:</label>
+    <input type="text" id="ingredient2" name="ingredient2"><br><br>
+
+    <!-- Add more ingredient fields as needed -->
+
+    <label for="note1">Note 1:</label>
+    <input type="text" id="note1" name="note1"><br><br>
+
+    <label for="note2">Note 2:</label>
+    <input type="text" id="note2" name="note2"><br><br>
+
+    <!-- Add more note fields as needed -->
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById("cocktailForm");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const ingredient1 = document.getElementById("ingredient1").value;
+    const ingredient2 = document.getElementById("ingredient2").value;
+    const note1 = document.getElementById("note1").value;
+    const note2 = document.getElementById("note2").value;
+
+    const cocktailXML = `
+      <cocktail>
+        <name>${name}</name>
+        <ingredients>
+          <ingredient>
+            <item>${ingredient1}</item>
+          </ingredient>
+          <ingredient>
+            <item>${ingredient2}</item>
+          </ingredient>
+        </ingredients>
+        <notes>
+          <note>${note1}</note>
+          <note>${note2}</note>
+        </notes>
+      </cocktail>
+    `;
+
+fetch('http://localhost:8080/exist/rest/db/igxtesting/cocktails', {
+  // ... existing code
+})
+.then(response => {
+  console.log('Server Response:', response);
+  return response.json();
+})
+.then(data => {
+  console.log('Parsed Response Data:', data);
+})
+.catch((error) => {
+  console.log('Fetch Error:', error);
+});
+
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blue Cocktail</title>
+    <style>
+        /* Simple CSS for formatting */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label, input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: auto;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<form id="cocktailForm">
+    <label for="cocktailName">Cocktail Name:</label>
+    <input type="text" id="cocktailName" name="cocktailName" required><br><br>
+
+    <label for="ingredients">Ingredients:</label>
+    <textarea id="ingredients" name="ingredients" required></textarea><br><br>
+
+    <label for="notes">Notes:</label>
+    <textarea id="notes" name="notes"></textarea><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    document.getElementById('cocktailForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const cocktailName = document.getElementById('cocktailName').value;
+        const ingredients = document.getElementById('ingredients').value;
+        const notes = document.getElementById('notes').value;
+
+        const xmlData = `
+            <cocktail>
+                <name>${cocktailName}</name>
+                <ingredients>${ingredients}</ingredients>
+                <notes>${notes}</notes>
+            </cocktail>
+        `;
+
+        sendDataToServer(xmlData);
+    });
+
+    function sendDataToServer(data) {
+        fetch('http://localhost:3000/store', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/xml'
+            },
+            body: data
+        })
+        .then(response => response.text())
+        .then(result => {
+            console.log('Success:', result);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+</script>
+
+</body>
+</html>

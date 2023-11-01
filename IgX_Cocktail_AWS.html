@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cocktail Reviews</title>
+  <script>
+    let xml; // Store fetched XML data
+
+    // Fetch XML data from S3
+    async function fetchData() {
+      const response = await fetch('https://ignatiusdevops.s3.us-east-2.amazonaws.com/cocktailtest.xml');
+      const text = await response.text();
+      xml = new window.DOMParser().parseFromString(text, 'text/xml');
+      displayData();
+    }
+
+    // Parse and display the XML data
+    function displayData() {
+      const list = document.getElementById('cocktailList');
+      list.innerHTML = ''; // Clear existing list
+      const cocktails = xml.getElementsByTagName('cocktail');
+      for(let i = 0; i < cocktails.length; i++) {
+        const id = cocktails[i].getElementsByTagName('ID')[0].textContent;
+        const name = cocktails[i].getElementsByTagName('Name')[0].textContent;
+        const review = cocktails[i].getElementsByTagName('Review')[0].textContent;
+        const listItem = document.createElement('li');
+        listItem.textContent = `ID: ${id}, Name: ${name}, Review: ${review}`;
+        list.appendChild(listItem);
+      }
+    }
+
+    // Add new cocktail
+    function addCocktail(event) {
+      event.preventDefault(); // Prevent form submission
+      const newID = document.getElementById('newID').value;
+      const newName = document.getElementById('newName').value;
+      const newReview = document.getElementById('newReview').value;
+
+      // Create new cocktail element
+      const newCocktail = xml.createElement('cocktail');
+      newCocktail.appendChild(createElement('ID', newID));
+      newCocktail.appendChild(createElement('Name', newName));
+      newCocktail.appendChild(createElement('Review', newReview));
+
+      // Append to XML and update display
+      xml.getElementsByTagName('cocktails')[0].appendChild(newCocktail);
+      displayData();
+    }
+
+    // Create XML element with text
+    function createElement(name, text) {
+      const element = xml.createElement(name);
+      const textNode = xml.createTextNode(text);
+      element.appendChild(textNode);
+      return element;
+    }
+
+    // Initialize
+    window.onload = fetchData;
+    document.getElementById('addCocktailForm').addEventListener('submit', addCocktail);
+  </script>
+</head>
+<body>
+  <h1>Cocktail Reviews</h1>
+  <ul id="cocktailList"></ul>
+  <!-- Form to add new cocktails -->
+  <form id="addCocktailForm">
+    <label for="newID">ID:</label>
+    <input type="text" id="newID" name="newID"><br>
+    <label for="newName">Name:</label>
+    <input type="text" id="newName" name="newName"><br>
+    <label for="newReview">Review:</label>
+    <input type="text" id="newReview" name="newReview"><br>
+    <input type="submit" value="Add Cocktail">
+  </form>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cocktail Finder 2</title>
+    <script>
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById('cocktailForm');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const ingredients = document.getElementById('ingredients').value;
+                fetchCocktails(ingredients);
+            });
+            displayWishlist();
+        });
+
+        function fetchCocktails(ingredients) {
+            const query = encodeURIComponent(ingredients);
+            const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${query}`;
+            
+            fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const cocktails = data.drinks;
+                const cocktailList = document.getElementById('cocktailList');
+                cocktailList.innerHTML = '';
+                
+                cocktails.slice(0, 3).forEach((cocktail) => {
+                    fetchCocktailDetails(cocktail.idDrink, ingredients);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+        }
+
+        function fetchCocktailDetails(id, ingredients) {
+            const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
+            fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const details = data.drinks[0];
+                const name = details.strDrink;
+                const thumbnail = details.strDrinkThumb;
+                const glass = details.strGlass;
+                const category = details.strCategory;
+
+                const cocktailItem = document.createElement('li');
+                cocktailItem.style.marginBottom = "20px";
+                cocktailItem.innerHTML = `
+                    <strong>Name:</strong> ${name}<br>
+                    <img src="${thumbnail}" alt="${name}" width="100"><br>
+                    <strong>Glass:</strong> ${glass}<br>
+                    <strong>Category:</strong> ${category}<br>
+                    <button onclick="addToWishlist('${id}', '${name}', '${ingredients}')">Save to Wishlist</button>
+                `;
+                document.getElementById('cocktailList').appendChild(cocktailItem);
+            })
+            .catch(error => {
+                console.error('Error fetching cocktail details:', error);
+            });
+        }
+
+        function addToWishlist(id, name, ingredients) {
+            const url = `https://www.thecocktaildb.com/drink/${id}`;
+            const cocktail = { id, name, ingredients, url };
+            wishlist.push(cocktail);
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            displayWishlist();
+        }
+
+        function displayWishlist() {
+            const wishlistDiv = document.getElementById('wishlist');
+            wishlistDiv.innerHTML = '<h3>Your Wishlist:</h3><table border="1"><tr><th>Name</th><th>ID</th><th>Keyword</th><th>Link</th></tr>';
+            wishlist.forEach((cocktail) => {
+                wishlistDiv.innerHTML += `<tr><td>${cocktail.name}</td><td>${cocktail.id}</td><td>${cocktail.ingredients}</td><td><a href="${cocktail.url}" target="_blank">View Recipe</a><br></td></tr>`;
+            });
+            wishlistDiv.innerHTML += '</table>';
+        }
+    </script>
+</head>
+<body>
+    <h1>Find Your Perfect Cocktail</h1>
+    <form id="cocktailForm">
+        <label for="ingredients">Enter Ingredients:</label>
+        <input type="text" id="ingredients" name="ingredients">
+        <button type="submit">Search</button>
+    </form>
+    <h2>Top Cocktails:</h2>
+    <ol id="cocktailList">
+    </ol>
+    <div id="wishlist">
+        <!-- Wishlist will be displayed here -->
+    </div>
+</body>
+</html>
