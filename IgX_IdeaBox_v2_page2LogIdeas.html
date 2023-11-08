@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IgX-IdeaBox v2.0 - Log Ideas</title>
+		<!-- V 2.0, page 2: new subpage - Log and Work With Ideas  -->
+	
+	<!-- Styles -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e5e5e5;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 30px;
+            background-color: white;
+        }
+        .main-content {
+            background-image: url('https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx/grid-black-pattern-yellow-glow.jpg');
+            background-size: cover;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .header-text {
+            font-size: 2em;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .sub-header-text {
+            font-size: 1.5em;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .btn-signup {
+    		background-color: orange;
+    		color: white;
+    		padding: 10px 15px;
+    		border: none;
+    		cursor: pointer;
+    		text-decoration: none;
+    		font-size: 1.2em;  
+		}
+        .features {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 100px;
+            background-color: white;
+        }
+        .feature-box {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+		.logoname-text {
+            font-size: 1.5em;
+            color: darkred;
+            margin-bottom: 20px;
+        }
+		.working-area {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 100px;
+            background-color: white;
+        }
+		.working-area-box {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+		.results-area {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 100px;
+            background-color: background: blue;
+        }
+		.results-area-box {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+	
+    </style>
+</head>
+	
+<!-- Functionality -->
+	
+<body>
+    <div class="navbar">
+<img src="https://luc2023fall.s3.us-east-2.amazonaws.com/IgX_WorkingLogo_A82E26.png" alt="IGX Logo" style="width: 20%;">
+		<p class="logoname-text">Ideabox</p>
+
+        <nav>
+            <ul style="list-style-type: none; display: flex; gap: 20px;">
+                <li><a href="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx2/IgX_IdeaBox_v2_page1HowItWorks.html" style="text-decoration: none; color: #333;">HOW IT WORKS</a></li>
+                <li><a href="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx2/IgX_IdeaBox_v2_page2LogIdeas.html" style="text-decoration: none; color: #333;">LOG IDEAS</a></li>
+                <li><a href="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx2/IgX_Cityscape3_102923.xml" style="text-decoration: none; color: #333;">FIND SYNERGIES</a></li>
+                <li><a href="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx2/IgX_IdeaBox_v2_page3Literature.html" style="text-decoration: none; color: #333;">LITERATURE</a></li>
+                <li><a href="#" style="text-decoration: none; color: #333;">LOGIN</a></li>
+                <li><a href="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx2/IgX_IdeaBox_v3.html" style="text-decoration: none; color: orange; padding: 5px 10px; border: 1px solid orange;">SIGN UP</a></li>
+            </ul>
+        </nav>
+    </div>
+	
+    <div class="main-content">
+        <p class="header-text">LOG &amp; CURATE IDEAS</p>
+    </div>
+	
+	<div class="working-area">
+    <div class="working-area-box">
+        <img src="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx/icon_ideas.png" alt="Feature 1 Icon" class="feature-icon">
+        <h2>Ideas</h2>
+    </div>
+
+    <!-- Form for data input -->
+	<!-- FORM FORM FORM FORM FORM FORM -->
+	
+<form id="proposalForm">
+    <table>
+        <tr>
+            <td><label for="proposalID">Proposal ID:</label></td>
+            <td><input type="text" id="proposalID" name="proposalID" required></td>
+        </tr>
+        <tr>
+            <td><label for="title">Title:</label></td>
+            <td><input type="text" id="title" name="title" required maxlength="255"></td>
+        </tr>
+        <tr>
+            <td><label for="researcherName">Researcher Name:</label></td>
+            <td><input type="text" id="researcherName" name="researcherName" required></td>
+        </tr>
+        <tr>
+            <td><label for="fundingAmount">Funding Amount:</label></td>
+            <td><input type="number" id="fundingAmount" name="fundingAmount" required min="1"></td>
+        </tr>
+        <tr>
+            <td><label for="status">Status:</label></td>
+            <td>
+                <select id="status" name="status" required>
+                    <option value="Draft">Draft</option>
+                    <option value="Submitted">Submitted</option>
+                    <option value="Approved">Approved</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+            </td>
+        </tr>
+	<tr>
+    <td><label for="abstract">Abstract:</label></td>
+    <td>
+        <textarea id="abstract" name="abstract" rows="4" cols="50" required></textarea>
+        <br>
+        <small>One or two paragraphs that summarize what you will do in the research project and how you will do it.</small>
+    </td>
+</tr>
+
+    </table>
+	
+	<input type="submit" value="Add Proposal">
+	
+</form>
+
+	<!-- End of form -->
+	</div>
+	
+	<div class="results-area">
+    <!-- Table for displaying data -->
+    <table id="proposalTable">
+        <thead>
+            <tr>
+                <th>Proposal ID</th>
+                <th>Title</th>
+                <th>Researcher Name</th>
+                <th>Funding Amount</th>
+				<th>Status</th>
+				<th>Abstract</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be inserted here dynamically -->
+        </tbody>
+    </table>
+
+	
+<script>
+    // JavaScript for handling form submissions and data persistence
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById("proposalForm");
+        const table = document.getElementById("proposalTable").getElementsByTagName("tbody")[0];
+        
+        // New code to populate table from localStorage upon page load
+        // START OF NEW PERSISTENCE CODE
+        function populateTableFromStorage() {
+            const storedData = JSON.parse(localStorage.getItem('proposalData')) || [];
+            storedData.forEach(data => {
+                const newRow = table.insertRow();
+                Object.values(data).forEach(value => {
+                    const cell = newRow.insertCell();
+                    cell.textContent = value;
+                    cell.style.textAlign = "left";
+                });
+                addSeparatorRow();
+            });
+        }
+        populateTableFromStorage();
+        // END OF NEW PERSISTENCE CODE
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const formData = new FormData(form);
+            const newRow = table.insertRow();
+            const rowObject = {}; // For persistence
+
+            // Iterating over each form field to populate the table
+            for (let [key, value] of formData.entries()) {
+                const cell = newRow.insertCell();
+                cell.textContent = value;
+                cell.style.textAlign = "left";
+                
+                rowObject[key] = value; // For persistence
+            }
+            
+            // New code to add the entry to localStorage
+            // START OF NEW PERSISTENCE CODE
+            const storedData = JSON.parse(localStorage.getItem('proposalData')) || [];
+            storedData.push(rowObject);
+            localStorage.setItem('proposalData', JSON.stringify(storedData));
+            // END OF NEW PERSISTENCE CODE
+
+            addSeparatorRow();
+        });
+
+        // Function to add separator row
+        function addSeparatorRow() {
+            // Create a new row for the horizontal line
+            const separatorRow = table.insertRow();
+            const separatorCell = separatorRow.insertCell();
+
+            // Make the cell span the entire width of the table
+            separatorCell.colSpan = "6"; 
+            
+            // Add a border to create the line
+            separatorCell.style.borderTop = "1px solid #000";
+        }
+    });
+</script>
+	
+
+</div>
+</body>
+</html>

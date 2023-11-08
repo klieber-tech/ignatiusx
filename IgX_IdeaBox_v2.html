@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IgX-IdeaBox v2.0</title>
+		<!-- V 2.0: add user form, change font sizes, refit to above the fold,  -->
+	
+	<!-- Styles -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e5e5e5;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 30px;
+            background-color: white;
+        }
+        .main-content {
+            background-image: url('https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx/grid-black-pattern-yellow-glow.jpg');
+            background-size: cover;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .header-text {
+            font-size: 2em;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .sub-header-text {
+            font-size: 1.5em;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .btn-signup {
+    		background-color: orange;
+    		color: white;
+    		padding: 10px 15px;
+    		border: none;
+    		cursor: pointer;
+    		text-decoration: none;
+    		font-size: 1.2em;  
+		}
+        .features {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 100px;
+            background-color: white;
+        }
+        .feature-box {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+		.logoname-text {
+            font-size: 1.5em;
+            color: darkred;
+            margin-bottom: 20px;
+        }
+	
+    </style>
+</head>
+	
+<!-- Functionality -->
+	
+<body>
+    <div class="navbar">
+<img src="https://luc2023fall.s3.us-east-2.amazonaws.com/IgX_WorkingLogo_A82E26.png" alt="IGX Logo" style="width: 20%;">
+		<p class="logoname-text">Ideabox</p>
+
+        <nav>
+            <ul style="list-style-type: none; display: flex; gap: 20px;">
+                <li><a href="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx2/IgX_IdeaBox_v2_page1HowItWorks.html" style="text-decoration: none; color: #333;">HOW IT WORKS</a></li>
+                <li><a href="#" style="text-decoration: none; color: #333;">LOG IDEAS</a></li>
+                <li><a href="#" style="text-decoration: none; color: #333;">FIND SYNERGIES</a></li>
+                <li><a href="#" style="text-decoration: none; color: #333;">LITERATURE</a></li>
+                <li><a href="#" style="text-decoration: none; color: #333;">LOGIN</a></li>
+                <li><a href="#" style="text-decoration: none; color: orange; padding: 5px 10px; border: 1px solid orange;">SIGN UP</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <p class="header-text">BE GOOD WITH YOUR IDEAS</p>
+        <p class="sub-header-text">SO YOU CAN BE EXPRESSIVE WITH YOUR RESEARCH</p>
+        <form action="#" method="post">
+    		<textarea placeholder="Type your idea here..." style="width: 60%; padding: 10px; resize: vertical; margin-bottom: 10px; font-size: 1.1em;"></textarea>
+    		<p><button type="submit" class="btn-signup" style="width: auto;">Enter Your Idea</button></p>
+		</form>
+    </div>
+    <div class="features">
+        <div class="feature-box">
+            <img src="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx/icon_ideas.png" alt="Feature 1 Icon" class="feature-icon">
+            <p><strong>Ideas? Captured</strong></p>
+            <p>Don't lose an idea again. See and work with your ideas in one place.</p>
+        </div>
+        <div class="feature-box">
+            <img src="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx/icon_synergy_2.png" alt="Feature 2 Icon" class="feature-icon">
+            <p><strong>Synergies? Seen</strong></p>
+            <p>From synergies among ideas to constructing a paper—get a clear view of your total research flow.</p>
+        </div>
+        <div class="feature-box">
+            <img src="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx/icon_research.png" alt="Feature 3 Icon" class="feature-icon">
+            <p><strong>Literature? Checked</strong></p>
+            <p>Use our APIs to check the literature for your keywords.</p>
+        </div>
+    </div>
+</body>
+</html>

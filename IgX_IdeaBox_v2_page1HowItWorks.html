@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IgX-IdeaBox v2.0 - How It Works</title>
+		<!-- V 2.0, page 1: new subpage  -->
+	
+	<!-- Styles -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e5e5e5;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 30px;
+            background-color: white;
+        }
+        .main-content {
+            background-image: url('https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx/grid-black-pattern-yellow-glow.jpg');
+            background-size: cover;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .header-text {
+            font-size: 2em;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .sub-header-text {
+            font-size: 1.5em;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .btn-signup {
+    		background-color: orange;
+    		color: white;
+    		padding: 10px 15px;
+    		border: none;
+    		cursor: pointer;
+    		text-decoration: none;
+    		font-size: 1.2em;  
+		}
+        .features {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 100px;
+            background-color: white;
+        }
+        .feature-box {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+		.logoname-text {
+            font-size: 1.5em;
+            color: darkred;
+            margin-bottom: 20px;
+        }
+	
+    </style>
+</head>
+	
+<!-- Functionality -->
+	
+<body>
+    <div class="navbar">
+<img src="https://luc2023fall.s3.us-east-2.amazonaws.com/IgX_WorkingLogo_A82E26.png" alt="IGX Logo" style="width: 20%;">
+		<p class="logoname-text">Ideabox</p>
+
+        <nav>
+            <ul style="list-style-type: none; display: flex; gap: 20px;">
+                <li><a href="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx2/IgX_IdeaBox_v2_page1HowItWorks.html" style="text-decoration: none; color: #333;">HOW IT WORKS</a></li>
+                <li><a href="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx2/IgX_IdeaBox_v2_page2LogIdeas.html" style="text-decoration: none; color: #333;">LOG IDEAS</a></li>
+                <li><a href="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx2/IgX_Cityscape3_102923.xml" style="text-decoration: none; color: #333;">FIND SYNERGIES</a></li>
+                <li><a href="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx2/IgX_IdeaBox_v2_page3Literature.html" style="text-decoration: none; color: #333;">LITERATURE</a></li>
+                <li><a href="#" style="text-decoration: none; color: #333;">LOGIN</a></li>
+                <li><a href="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx2/IgX_IdeaBox_v3.html" style="text-decoration: none; color: orange; padding: 5px 10px; border: 1px solid orange;">SIGN UP</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <p class="header-text">HOW IT WORKS</p>
+    </div>
+	<div class="features">
+
+    <!-- Feature 1 - Ideas? Captured -->
+    <div class="feature-box">
+        <img src="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx/icon_ideas.png" alt="Feature 1 Icon" class="feature-icon">
+        <p><strong>LOG YOUR IDEAS FOR REFERENCE AND CURATION</strong></p>
+        <p>Capture ideas on the fly. Then circle back to them and organize them in our tree structure, later. Ideas are considered <strong>Building Blocks</strong>. These can then be grouped as <strong>Edifices</strong>, which represent a specific research output -- a paper or presentation. Edifices are maintained within a <strong>Cityscape</strong>, a portfolio of one's interests, research and outputs.</p>
+    </div>
+    
+    <!-- Feature 2 - Synergies? Seen -->
+    <div class="feature-box">
+        <img src="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx/icon_synergy_2.png" alt="Feature 2 Icon" class="feature-icon">
+        <p><strong>UNEARTH THE SYNERGIES IN YOUR OWN WORK AND OTHERS' WORK</strong></p>
+        <p>Discover the power of our advanced search and filtering systems, leveraging the capabilities of XML and XSLT. Use keywords, dates, and other metadata to group specific ideas, as well as visualize synergies and relationships between various concepts, thus enhancing the research process.</p>
+    </div>
+    
+    <!-- Feature 3 - Literature? Checked -->
+    <div class="feature-box">
+        <img src="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx/icon_research.png" alt="Feature 3 Icon" class="feature-icon">
+        <p><strong>SEARCH AVAILABLE LITERATURE WITH OUR ARXIV API</strong></p>
+        <p>Our literature-checking capabilities include a live API connecting directly to arXiv, the digital open-access source for scholarly articles. arXiv.org now hosts more than two million scholarly articles in eight subject areas (<a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi-h5Duu5mCAxVUk4kEHY30A6wQFnoECAgQAw&url=https%3A%2F%2Finfo.arxiv.org%2Fabout%2Findex.html&usg=AOvVaw3Nz1GWvzWxymOYAmmvUTs8&opi=89978449" title="arXiv link" target="_blank">source: ArXiv</a>). Scan academic literature on your keywords of choice, ensuring that your research is both novel and comprehensive.</p>
+    </div>
+
+</div>
+</body>
+</html>
