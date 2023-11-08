@@ -1,0 +1,34 @@
+<!-- Example Building Block Elements within an Edifice -->
+<Building_Block>
+    <Idea>Title of Idea 1</Idea>
+    <Date_Created></Date_Created>
+    <Date_Updated></Date_Updated>
+    <Keywords>
+        <!-- Nested Keyword Elements Here -->
+    </Keywords>
+    <Bricks>
+        <!-- Nested Brick Elements Here -->
+    </Bricks>
+    <Related_Papers>
+        <!-- Nested Paper Elements Here -->
+    </Related_Papers>
+    <Notes></Notes>
+</Building_Block>
+
+<Building_Block>
+    <Idea>Title of Idea 2</Idea>
+    <Date_Created></Date_Created>
+    <Date_Updated></Date_Updated>
+    <Keywords>
+        <!-- Nested Keyword Elements Here -->
+    </Keywords>
+    <Bricks>
+        <!-- Nested Brick Elements Here -->
+    </Bricks>
+    <Related_Papers>
+        <!-- Nested Paper Elements Here -->
+    </Related_Papers>
+    <Notes></Notes>
+</Building_Block>
+
+<!-- (Additional Building_Block elements can be added in a similar manner) -->

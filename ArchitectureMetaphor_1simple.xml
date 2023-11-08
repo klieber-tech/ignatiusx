@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Cityscape>
+    
+    <!-- Holding Pen for Unassigned Ideas -->
+    <Holding_Pen>
+        <Building_Block>IoT Security Vulnerabilities</Building_Block>
+        <Building_Block>Cybersecurity in Healthcare</Building_Block>
+        <Building_Block>Data Analytics in Retail</Building_Block>
+    </Holding_Pen>
+    
+    <!-- Edifice: Admissions Analytics -->
+    <Edifice>
+        <Title>Admissions Analytics</Title>
+        <Building_Block>Predictive Data for College Admissions</Building_Block>
+        <Building_Block>Zip Code Demographic Analyses for College Admissions</Building_Block>
+    </Edifice>
+    
+    <!-- Edifice: Pattern Recognition in Prospect Lead Generation -->
+    <Edifice>
+        <Title>Pattern Recognition in Prospect Lead Generation</Title>
+        <Building_Block>Similar to Wireshark Logging -- Identify Trouble Patterns and Positive Patterns</Building_Block>
+    </Edifice>
+    
+</Cityscape>

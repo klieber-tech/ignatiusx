@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx2/IgX_Cityscape_XSL4_IdEd_Styling3.xsl"?>
+<Cityscape>
+    <Edifice id="ED001">
+        <Title>Holding Pen</Title>
+        <Status>In Progress</Status>
+        <Output>Ready to be sorted!</Output>
+        <Building_Block id="BB001">
+            <Idea edificeid="ED001">Leverage machine learning algorithms and historical sales data to predict inventory needs, optimizing stock levels and reducing overhead costs.</Idea>
+            <Notes></Notes>
+        </Building_Block>
+        <Building_Block id="BB002">
+            <Idea edificeid="ED001">Implement NLP techniques to analyze customer reviews and feedback, extracting sentiment and providing actionable insights for product and service improvement.</Idea>
+            <Notes></Notes>
+        </Building_Block>
+        <Building_Block id="BB003">
+            <Idea edificeid="ED001">Analyze user behavior on digital platforms to understand pain points, preferences, and navigation patterns, leading to data-driven design decisions for improved user experience.</Idea>
+            <Keywords>
+            </Keywords>
+            <Bricks>
+            </Bricks>
+            <Notes></Notes>
+        </Building_Block>
+    </Edifice>
+    <Edifice id="ED002">
+        <Title>Analytics for College Admissions</Title>
+        <Status>In Progress</Status>
+        <Output>Conference presentation for ABCD conference.</Output>
+        <Building_Block id="BB004">
+            <Idea edificeid="ED001">Develop an advanced AI chatbot that utilizes NLP and machine learning to better understand user queries, ensuring more relevant responses and providing a smoother customer interaction experience on digital platforms.</Idea>
+            <Notes></Notes>
+        </Building_Block>
+        <Building_Block id="BB005">
+            <Idea edificeid="ED001">Implementing natural language processing (NLP) techniques to analyze admission essays and correlate linguistic patterns with student success metrics.</Idea>
+            <Notes></Notes>
+        </Building_Block>
+        <Building_Block id="BB006">
+            <Idea edificeid="ED002">Utilizing cluster analysis to segment applicants into distinct categories, enabling more tailored outreach and communication strategies.</Idea>
+            <Notes></Notes>
+        </Building_Block>       
+    </Edifice>
+    <Edifice id="ED003">
+        <Title>Visualizations for Student Prospect Success</Title>
+        <Status>In Progress</Status>
+        <Output>Research paper that explores new visualizations for non-tech users.</Output>
+        <Building_Block id="BB007">
+            <Idea edificeid="ED002">Employ NLP and machine learning models to analyze users' browsing behaviors, interactions, and feedback on digital platforms, thereby curating personalized content recommendations tailored to individual preferences and interests.</Idea>
+            <Notes></Notes>
+        </Building_Block>
+        <Building_Block id="BB008">
+            <Idea edificeid="ED003">Incorporate voice recognition and NLP techniques to transcribe and analyze customer calls in real-time, identifying common pain points, gauging sentiment, and offering immediate actionable feedback to call center agents.</Idea>
+            <Notes></Notes>
+        </Building_Block>
+        <Building_Block id="BB009">
+            <Idea edificeid="ED001">Integrate NLP-driven analytics into product planning tools, allowing for the automated extraction of product feature requests and suggestions from user feedback, forums, and reviews, ensuring that product roadmaps align closely with customer desires.</Idea>
+            <Notes></Notes>
+        </Building_Block>       
+    </Edifice>
+    
+</Cityscape>

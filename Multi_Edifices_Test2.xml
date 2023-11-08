@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Cityscape>
+    <Edifice id="E1">
+        <Title>Admissions Demographics</Title>
+        <Output>Increased Diversity</Output>
+        <Building_Block>
+            <Idea edificeid="E1">Analyze high school GPAs</Idea>
+            <Idea edificeid="E1">Evaluate standardized test scores</Idea>
+            <Idea edificeid="E1">Incorporate extracurricular activities into scoring</Idea>
+        </Building_Block>
+    </Edifice>
+    
+    <Edifice id="E2">
+        <Title>Admissions Outreach</Title>
+        <Output>Increased Applications</Output>
+        <Building_Block>
+            <Idea edificeid="E2">Host virtual campus tours</Idea>
+            <Idea edificeid="E2">Offer QA sessions with current students</Idea>
+            <Idea edificeid="E2">Collaborate with high schools for information sessions</Idea>
+        </Building_Block>
+    </Edifice>
+    
+    <Edifice id="E3">
+        <Title>Admissions Decision Process</Title>
+        <Output>Higher Quality Candidates</Output>
+        <Building_Block>
+            <Idea edificeid="E3">Implement a holistic review process</Idea>
+            <Idea edificeid="E3">Prioritize recommendation letters</Idea>
+            <Idea edificeid="E3">Incorporate an optional interview phase</Idea>
+        </Building_Block>
+    </Edifice>
+</Cityscape>

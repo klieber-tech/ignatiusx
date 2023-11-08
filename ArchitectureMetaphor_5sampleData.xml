@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Cityscape>
+    
+    <!-- Sample Edifice: Holding Pen -->
+    <Edifice id="001">
+        <Title>Holding Pen</Title>
+        
+        <Researchers>
+            <Researcher>John Doe</Researcher>
+            <Researcher>Jane Smith</Researcher>
+        </Researchers>
+        
+        <Foundations>
+            <Foundation>Sample Foundation 1</Foundation>
+            <Foundation>Sample Foundation 2</Foundation>
+        </Foundations>
+        
+        <Grants>
+            <Grant>Sample Grant A</Grant>
+            <Grant>Sample Grant B</Grant>
+        </Grants>
+        
+        <Collaborators>
+            <Collaborator>Collaborator X</Collaborator>
+            <Collaborator>Collaborator Y</Collaborator>
+        </Collaborators>
+        
+        <Status>In Progress</Status>
+        <Output>Sample Output for Holding Pen</Output>
+        <Date_Created>2023-10-27</Date_Created>
+        <Date_Updated>2023-10-28</Date_Updated>
+        <Research_Description>Description about the research carried out in the Holding Pen.</Research_Description>
+        
+        <!-- Sample Building Block for Holding Pen -->
+        <Building_Block>
+            <Idea>This is a sample idea in the holding pen.</Idea>
+            <Date_Created>2023-10-27</Date_Created>
+            <Date_Updated>2023-10-28</Date_Updated>
+            
+            <Keywords>
+                <Keyword>Research</Keyword>
+                <Keyword>Sample</Keyword>
+                <Keyword>Idea</Keyword>
+            </Keywords>
+            
+            <Bricks>
+                <Brick>Sample Brick 1 for Idea</Brick>
+                <Brick>Sample Brick 2 for Idea</Brick>
+            </Bricks>
+            
+            <Related_Papers>
+                <Paper>Sample Paper A related to Idea</Paper>
+                <Paper>Sample Paper B related to Idea</Paper>
+            </Related_Papers>
+            
+            <Notes>Some notes about the idea in the holding pen.</Notes>
+        </Building_Block>
+        
+    </Edifice>
+    
+    <!-- Additional Edifices and Building Blocks can be added similarly -->
+    
+</Cityscape>

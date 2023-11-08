@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Cityscape>
+    <Edifice id="ED001">
+        <Title>Holding Pen</Title>
+        <Status>In Progress</Status>
+        <Output>Ready to be sorted!</Output>
+        <Building_Block id="BB001">
+            <Idea id="ID001">Leverage machine learning algorithms and historical sales data to predict inventory needs, optimizing stock levels and reducing overhead costs.</Idea>
+            <Notes></Notes>
+        </Building_Block>
+        <Building_Block id="BB002">
+            <Idea id="ID002">Implement NLP techniques to analyze customer reviews and feedback, extracting sentiment and providing actionable insights for product and service improvement.</Idea>
+            <Notes></Notes>
+        </Building_Block>
+        <Building_Block id="BB003">
+            <Idea id="ID003">Analyze user behavior on digital platforms to understand pain points, preferences, and navigation patterns, leading to data-driven design decisions for improved user experience.</Idea>
+            <Keywords>
+            </Keywords>
+            <Bricks>
+            </Bricks>
+            <Notes></Notes>
+        </Building_Block>
+    </Edifice>
+    <Edifice id="ED002">
+        <Title>Analytics for College Admissions</Title>
+        <Status>In Progress</Status>
+        <Output>Conference presentation for ABCD conference.</Output>
+        <Building_Block id="BB004">
+            <Idea id="ID004">Implement NLP techniques to analyze customer reviews and feedback, extracting sentiment and providing actionable insights for product and service improvement.</Idea>
+            <Notes></Notes>
+        </Building_Block>
+        <Building_Block id="BB005">
+            <Idea id="ID005">Implementing natural language processing (NLP) techniques to analyze admission essays and correlate linguistic patterns with student success metrics.</Idea>
+            <Notes></Notes>
+        </Building_Block>
+        <Building_Block id="BB006">
+            <Idea id="ID006">Utilizing cluster analysis to segment applicants into distinct categories, enabling more tailored outreach and communication strategies.</Idea>
+            <Notes></Notes>
+        </Building_Block>       
+    </Edifice>
+    <Edifice id="ED003">
+        <Title>Visualizations for Student Prospect Success</Title>
+        <Status>In Progress</Status>
+        <Output>Research paper that explores new visualizations for non-tech users.</Output>
+        <Building_Block id="BB007">
+            <Idea id="ID007">Implement NLP techniques to analyze customer reviews and feedback, extracting sentiment and providing actionable insights for product and service improvement.</Idea>
+            <Notes></Notes>
+        </Building_Block>
+        <Building_Block id="BB008">
+            <Idea id="ID008">Implementing natural language processing (NLP) techniques to analyze admission essays and correlate linguistic patterns with student success metrics.</Idea>
+            <Notes></Notes>
+        </Building_Block>
+        <Building_Block id="BB009">
+            <Idea id="ID009">Utilizing cluster analysis to segment applicants into distinct categories, enabling more tailored outreach and communication strategies.</Idea>
+            <Notes></Notes>
+        </Building_Block>       
+    </Edifice>
+    
+</Cityscape>

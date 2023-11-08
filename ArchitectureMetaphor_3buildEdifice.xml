@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Cityscape>
+    
+    <!-- Holding Pen for Unassigned Ideas -->
+    <Holding_Pen>
+        <!-- (Building_Block elements here) -->
+    </Holding_Pen>
+    
+    <!-- Edifice: Admissions Analytics -->
+    <Edifice>
+        <Title>Admissions Analytics</Title>
+        <Researchers>
+            <!-- Nested Researcher Elements Here -->
+        </Researchers>
+        <Foundations>
+            <!-- Nested Foundation Elements Here -->
+        </Foundations>
+        <Grants>
+            <!-- Nested Grant Elements Here -->
+        </Grants>
+        <Collaborators>
+            <!-- Nested Collaborator Elements Here -->
+        </Collaborators>
+        <Status></Status>
+        <Output></Output>
+        <Date_Created></Date_Created>
+        <Date_Updated></Date_Updated>
+        <Research_Description></Research_Description>
+        <!-- (Building_Block elements here) -->
+    </Edifice>
+    
+    <!-- Edifice: Pattern Recognition in Prospect Lead Generation -->
+    <Edifice>
+        <Title>Pattern Recognition in Prospect Lead Generation</Title>
+        <Researchers>
+            <!-- Nested Researcher Elements Here -->
+        </Researchers>
+        <Foundations>
+            <!-- Nested Foundation Elements Here -->
+        </Foundations>
+        <Grants>
+            <!-- Nested Grant Elements Here -->
+        </Grants>
+        <Collaborators>
+            <!-- Nested Collaborator Elements Here -->
+        </Collaborators>
+        <Status></Status>
+        <Output></Output>
+        <Date_Created></Date_Created>
+        <Date_Updated></Date_Updated>
+        <Research_Description></Research_Description>
+        <!-- (Building_Block elements here) -->
+    </Edifice>
+    
+</Cityscape>

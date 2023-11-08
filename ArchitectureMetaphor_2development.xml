@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Cityscape>
+    
+    <!-- Holding Pen for Unassigned Ideas -->
+    <Holding_Pen>
+        <Building_Block>
+            <Idea>IoT Security Vulnerabilities</Idea>
+            <Date_Created></Date_Created>
+            <Date_Updated></Date_Updated>
+            <Keywords>
+                <!-- Nested Keyword Elements Here -->
+            </Keywords>
+            <Bricks>
+                <!-- Nested Brick Elements Here -->
+            </Bricks>
+            <Related_Papers>
+                <!-- Nested Paper Elements Here -->
+            </Related_Papers>
+        </Building_Block>
+        <!-- ... (Additional Building_Block entries as needed) -->
+    </Holding_Pen>
+    
+    <!-- Edifice: Admissions Analytics -->
+    <Edifice>
+        <Title>Admissions Analytics</Title>
+        <Building_Block>
+            <Idea>Predictive Data for College Admissions</Idea>
+            <Date_Created></Date_Created>
+            <Date_Updated></Date_Updated>
+            <Keywords>
+                <!-- Nested Keyword Elements Here -->
+            </Keywords>
+            <Bricks>
+                <!-- Nested Brick Elements Here -->
+            </Bricks>
+            <Related_Papers>
+                <!-- Nested Paper Elements Here -->
+            </Related_Papers>
+        </Building_Block>
+        <!-- ... (Additional Building_Block entries as needed) -->
+    </Edifice>
+    
+    <!-- Edifice: Pattern Recognition in Prospect Lead Generation -->
+    <Edifice>
+        <Title>Pattern Recognition in Prospect Lead Generation</Title>
+        <Building_Block>
+            <Idea>Similar to Wireshark Logging -- Identify Trouble Patterns and Positive Patterns</Idea>
+            <Date_Created></Date_Created>
+            <Date_Updated></Date_Updated>
+            <Keywords>
+                <!-- Nested Keyword Elements Here -->
+            </Keywords>
+            <Bricks>
+                <!-- Nested Brick Elements Here -->
+            </Bricks>
+            <Related_Papers>
+                <!-- Nested Paper Elements Here -->
+            </Related_Papers>
+        </Building_Block>
+        <!-- ... (Additional Building_Block entries as needed) -->
+    </Edifice>
+    
+</Cityscape>

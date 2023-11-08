@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Cityscape>
+    
+    <Edifice id="E0">
+        <Title>Idea Holding Pen</Title>
+        <Output>N/A, Holding Pen Only</Output>
+        <Building_Block>
+            <Idea edificeid="E0">Sample Data 1</Idea>
+            <Date_Created></Date_Created>
+            <Date_Updated></Date_Updated>
+            <Keywords>
+                <!-- Nested Keyword Elements Here -->
+            </Keywords>
+            <Bricks>
+                <!-- Nested Brick Elements Here -->
+            </Bricks>
+            <Related_Papers>
+                <!-- Nested Paper Elements Here -->
+            </Related_Papers>
+            <Notes></Notes>
+        </Building_Block>
+        <Building_Block>
+            <Idea edificeid="E0">Sample Data 2</Idea>
+            <Date_Created></Date_Created>
+            <Date_Updated></Date_Updated>
+            <Keywords>
+                <!-- Nested Keyword Elements Here -->
+            </Keywords>
+            <Bricks>
+                <!-- Nested Brick Elements Here -->
+            </Bricks>
+            <Related_Papers>
+                <!-- Nested Paper Elements Here -->
+            </Related_Papers>
+            <Notes></Notes>
+        </Building_Block>
+        <Building_Block>
+            <Idea edificeid="E0">Sample Data 3</Idea>
+            <Date_Created></Date_Created>
+            <Date_Updated></Date_Updated>
+            <Keywords>
+                <!-- Nested Keyword Elements Here -->
+            </Keywords>
+            <Bricks>
+                <!-- Nested Brick Elements Here -->
+            </Bricks>
+            <Related_Papers>
+                <!-- Nested Paper Elements Here -->
+            </Related_Papers>
+            <Notes></Notes>
+        </Building_Block>
+    </Edifice>
+    
+    <Edifice id="E1">
+        <Title>Admissions Demographics Using Predictive Analytics</Title>
+        <Output>Research paper on analyzing admissions demographics for student success</Output>
+        <Researchers>
+            <!-- Nested Researcher Elements Here -->
+        </Researchers>
+        <Foundations>
+            <!-- Nested Foundation Elements Here -->
+        </Foundations>
+        <Grants>
+            <!-- Nested Grant Elements Here -->
+        </Grants>
+        <Collaborators>
+            <!-- Nested Collaborator Elements Here -->
+        </Collaborators>
+        <Status></Status>
+        <Output></Output>
+        <Date_Created></Date_Created>
+        <Date_Updated></Date_Updated>
+        <Research_Description></Research_Description>
+        <!-- (Building_Block elements here) -->
+        <Building_Block>
+            <Idea edificeid="E1">Analyze high school GPAs</Idea>
+            <Date_Created></Date_Created>
+            <Date_Updated></Date_Updated>
+            <Keywords>
+                <!-- Nested Keyword Elements Here -->
+            </Keywords>
+            <Bricks>
+                <!-- Nested Brick Elements Here -->
+            </Bricks>
+            <Related_Papers>
+                <!-- Nested Paper Elements Here -->
+            </Related_Papers>
+            <Notes></Notes>
+        </Building_Block>
+        <Building_Block>
+            <Idea edificeid="E1">Host virtual campus tours</Idea>
+            <Date_Created></Date_Created>
+            <Date_Updated></Date_Updated>
+            <Keywords>
+                <!-- Nested Keyword Elements Here -->
+            </Keywords>
+            <Bricks>
+                <!-- Nested Brick Elements Here -->
+            </Bricks>
+            <Related_Papers>
+                <!-- Nested Paper Elements Here -->
+            </Related_Papers>
+            <Notes></Notes>
+        </Building_Block>
+        <Building_Block>
+            <Idea edificeid="E1">Incorporate extracurricular activities into scoring</Idea>
+            <Date_Created></Date_Created>
+            <Date_Updated></Date_Updated>
+            <Keywords>
+                <!-- Nested Keyword Elements Here -->
+            </Keywords>
+            <Bricks>
+                <!-- Nested Brick Elements Here -->
+            </Bricks>
+            <Related_Papers>
+                <!-- Nested Paper Elements Here -->
+            </Related_Papers>
+            <Notes></Notes>
+        </Building_Block>
+    </Edifice>
+    
+    <Edifice id="E2">
+        <Title>Improving Admissions Dialogues For Better Enrollment</Title>
+        <Output>Conference talk on new ways to leverage AI to improve admissions dialogues</Output>
+        <Researchers>
+            <!-- Nested Researcher Elements Here -->
+        </Researchers>
+        <Foundations>
+            <!-- Nested Foundation Elements Here -->
+        </Foundations>
+        <Grants>
+            <!-- Nested Grant Elements Here -->
+        </Grants>
+        <Collaborators>
+            <!-- Nested Collaborator Elements Here -->
+        </Collaborators>
+        <Status></Status>
+        <Output></Output>
+        <Date_Created></Date_Created>
+        <Date_Updated></Date_Updated>
+        <Research_Description></Research_Description>
+        <!-- (Building_Block elements here) -->
+        <Building_Block>
+            <Idea edificeid="E1">Evaluate standardized test scores</Idea>
+            <Date_Created></Date_Created>
+            <Date_Updated></Date_Updated>
+            <Keywords>
+                <!-- Nested Keyword Elements Here -->
+            </Keywords>
+            <Bricks>
+                <!-- Nested Brick Elements Here -->
+            </Bricks>
+            <Related_Papers>
+                <!-- Nested Paper Elements Here -->
+            </Related_Papers>
+            <Notes></Notes>
+        </Building_Block>
+        <Building_Block>
+            <Idea edificeid="E1">Evaluate standardized test scores</Idea>
+            <Date_Created></Date_Created>
+            <Date_Updated></Date_Updated>
+            <Keywords>
+                <!-- Nested Keyword Elements Here -->
+            </Keywords>
+            <Bricks>
+                <!-- Nested Brick Elements Here -->
+            </Bricks>
+            <Related_Papers>
+                <!-- Nested Paper Elements Here -->
+            </Related_Papers>
+            <Notes></Notes>
+        </Building_Block>
+        <Building_Block>
+            <Idea edificeid="E1">Evaluate standardized test scores</Idea>
+            <Date_Created></Date_Created>
+            <Date_Updated></Date_Updated>
+            <Keywords>
+                <!-- Nested Keyword Elements Here -->
+            </Keywords>
+            <Bricks>
+                <!-- Nested Brick Elements Here -->
+            </Bricks>
+            <Related_Papers>
+                <!-- Nested Paper Elements Here -->
+            </Related_Papers>
+            <Notes></Notes>
+        </Building_Block>
+        <Building_Block>
+            <Idea edificeid="E2">Host virtual campus tours</Idea>
+            <Idea edificeid="E2">Offer QA sessions with current students</Idea>
+            <Idea edificeid="E2">Collaborate with high schools for information sessions</Idea>
+        </Building_Block>
+    </Edifice>
+    
+</Cityscape>

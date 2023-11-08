@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Cityscape>
+    <!-- Defining Edifices -->
+    <Edifice id="001" title="Holding Pen"></Edifice>
+    <Edifice id="002" title="Edifice A: Student Retention Analytics"></Edifice>
+    <Edifice id="003" title="Edifice B: Admission Predictive Models"></Edifice>
+    
+    <!-- Listing Ideas with associated Edifice IDs -->
+    <Building_Block>
+        <Idea edifice="001">Exploratory analysis of student engagement in online courses.</Idea>
+        <Idea edifice="002">Use of machine learning to predict student retention based on first semester performance.</Idea>
+        <Idea edifice="002">Development of a dashboard for tracking key retention metrics in real-time.</Idea>
+        <Idea edifice="003">Predictive analytics to identify students likely to benefit from early intervention programs.</Idea>
+        <Idea edifice="003">Comparative study of traditional vs holistic admission processes and their impact on student success.</Idea>
+        <Idea edifice="001">In-depth study on the correlation between extracurricular participation and student academic performance.</Idea>
+    </Building_Block>
+</Cityscape>
+

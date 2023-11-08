@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Cityscape>
+    
+    <!-- Sample Edifice: Holding Pen -->
+    <Edifice id="001">
+        <Title>Holding Pen</Title>
+        <Status>In Progress</Status>
+        <Output>Preliminary results for holding pen</Output>
+        
+        <!-- Sample Building Block for Holding Pen -->
+        <Building_Block>
+            <Idea>Initial idea for the holding pen project.</Idea>
+            <Date_Created>2023-01-15</Date_Created>
+            <Date_Updated>2023-01-20</Date_Updated>
+            
+            <Keywords>
+                <Keyword>Initiation</Keyword>
+                <Keyword>Primary</Keyword>
+            </Keywords>
+            
+            <Bricks>
+                <Brick>Foundational component 1</Brick>
+                <Brick>Basic component 2</Brick>
+            </Bricks>
+            
+            <Related_Papers>
+                <Paper>Introduction to Holding Pens</Paper>
+                <Paper>The Evolution of Initial Concepts</Paper>
+            </Related_Papers>
+        </Building_Block>
+        
+    </Edifice>
+    
+    <!-- Sample Edifice: Research Project A -->
+    <Edifice id="002">
+        <Title>Research Project A</Title>
+        <Status>Completed</Status>
+        <Output>Final report for Research Project A</Output>
+        
+        <!-- Sample Building Block for Research Project A -->
+        <Building_Block>
+            <Idea>Main idea for Research Project A.</Idea>
+            <Date_Created>2023-01-16</Date_Created>
+            <Date_Updated>2023-01-20</Date_Updated>
+            
+            <Keywords>
+                <Keyword>Innovation</Keyword>
+                <Keyword>Research</Keyword>
+                <Keyword>Project</Keyword>
+            </Keywords>
+            
+            <Bricks>
+                <Brick>Crucial component 1 for Idea</Brick>
+                <Brick>Essential component 2 for Idea</Brick>
+            </Bricks>
+            
+            <Related_Papers>
+                <Paper>Dynamics of Innovative Research</Paper>
+                <Paper>Project Management in the Modern Era</Paper>
+            </Related_Papers>
+        </Building_Block>
+        
+    </Edifice>
+    
+</Cityscape>
