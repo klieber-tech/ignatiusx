@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<superCocktails>
+    <!-- Example Entry -->
+    <cocktail>
+        <alcohol>Whiskey</alcohol>
+    </cocktail>
+    <!-- More cocktail entries will be added here -->
+<cocktail><alcohol>blackberries</alcohol></cocktail><cocktail><alcohol>vodka</alcohol></cocktail><cocktail><alcohol>triple sec</alcohol></cocktail></superCocktails>
