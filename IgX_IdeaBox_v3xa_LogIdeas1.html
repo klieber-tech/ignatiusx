@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IgX-IdeaBox v3.0 - Log Ideas</title>
+		<!-- V 2.0, page 2: new subpage - Log and Work With Ideas  -->
+	
+	<!-- Styles -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e5e5e5;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 30px;
+            background-color: white;
+        }
+        .main-content {
+            background-image: url('https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx/grid-black-pattern-yellow-glow.jpg');
+            background-size: cover;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .header-text {
+            font-size: 2em;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .sub-header-text {
+            font-size: 1.5em;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .btn-signup {
+    		background-color: orange;
+    		color: white;
+    		padding: 10px 15px;
+    		border: none;
+    		cursor: pointer;
+    		text-decoration: none;
+    		font-size: 1.2em;  
+		}
+        .features {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 100px;
+            background-color: white;
+        }
+        .feature-box {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+		.logoname-text {
+            font-size: 1.5em;
+            color: darkred;
+            margin-bottom: 20px;
+        }
+		.working-area {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 100px;
+            background-color: white;
+        }
+		.working-area-box {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+		.results-area {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 100px;
+            background-color: background: blue;
+        }
+		.results-area-box {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+		.recent-ideas {
+    		padding-left: 10px;
+		}
+	
+    </style>
+</head>
+	
+<!-- Functionality -->
+	
+<body>
+<div class="navbar">
+    <!-- Logo Image - Wrapped in an anchor tag -->
+    <a href="IgX_IdeaBox_v3xa.html" style="display: inline-block; width: 20%;">
+        <img src="https://luc2023fall.s3.us-east-2.amazonaws.com/IgX_WorkingLogo_A82E26.png" alt="IGX Logo" style="width: 100%; height: auto;">
+    </a>
+		
+    <!-- Ideabox Text - Also wrapped in an anchor tag -->
+    <a href="IgX_IdeaBox_v3xa.html" style="text-decoration: none; color: inherit; display: inline-block;">
+        <p class="logoname-text" style="margin: 0;">Ideabox</p>
+    </a>
+
+
+        <nav>
+            <ul style="list-style-type: none; display: flex; gap: 20px;">
+                <li><a href="IgX_IdeaBox_v3xa_HowItWorks.html" style="text-decoration: none; color: #333;">HOW IT WORKS</a></li>
+                <li><a href="IgX_IdeaBox_v3xa_LogIdeas.html" style="text-decoration: none; color: #333;">LOG IDEAS</a></li>
+                <li><a href="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx2/IgX_Cityscape3_102923.xml" style="text-decoration: none; color: #333;" target="_blank">FIND SYNERGIES</a></li>
+                <li><a href="IgX_IdeaBox_v3xa_Literature.html" style="text-decoration: none; color: #333;">LITERATURE</a></li>
+                <li><a href="#" style="text-decoration: none; color: #333;">LOGIN</a></li>
+                <li><a href="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx2/IgX_IdeaBox_v3.html" style="text-decoration: none; color: orange; padding: 5px 10px; border: 1px solid orange;">SIGN UP</a></li>
+            </ul>
+        </nav>
+    </div>
+	
+    <div class="main-content">
+        <p class="header-text">LOG &amp; CURATE IDEAS</p>
+
+        <!-- New Form for Idea and Keycat input -->
+        <form id="ideaForm">
+            <div>
+                <label for="ideaInput">Idea:</label>
+                <textarea id="ideaInput" placeholder="Type your idea here..." required 
+                          style="width: 60%; padding: 10px; resize: vertical; margin-bottom: 10px; font-size: 1.1em;"></textarea>
+            </div>
+            <div>
+                <label for="keycatInput">Key Category:</label>
+                <input type="text" id="keycatInput" placeholder="Enter Key Category" required 
+                       style="width: 60%; padding: 10px; margin-bottom: 10px; font-size: 1.1em;"/>
+            </div>
+            <button type="submit" class="btn-signup" style="width: auto;">Submit Idea</button>
+        </form>
+    </div>
+
+	
+
+		
+		
+	<div class="recent-ideas">
+    	<h2>Most Recent Ideas</h2>
+    	<ul id="recentIdeasList">
+       	 <!-- Recent ideas will be displayed here -->
+    	</ul>
+	</div>
+
+<!-- JavaScript to handle the form submission -->
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("ideaForm");
+
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+                submitIdea();
+            });
+
+            // Event listener for the Enter key in the idea input field
+            document.getElementById('ideaInput').addEventListener('keypress', function(event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    submitIdea();
+                }
+            });
+
+            function submitIdea() {
+    			var idea = document.getElementById('ideaInput').value;
+    			var keycat = document.getElementById('keycatInput').value;
+    
+				if (idea && keycat) {
+        			// AJAX request to logIdea.php
+        			fetch('logIdea.php', {
+            			method: 'POST',
+            			headers: {
+                			'Content-Type': 'application/json'
+            			},
+            			body: JSON.stringify({ idea: idea, keycat: keycat })
+        			})
+        			.then(response => response.text())
+        			.then(data => {
+            			alert(data);
+            			// Clear the form fields
+            			document.getElementById('ideaInput').value = '';
+            			document.getElementById('keycatInput').value = '';
+						// Refresh the page
+            			window.location.reload();
+        			})
+        			.catch(error => console.error('Error:', error));
+    		}
+}
+			
+			
+			// Function to fetch and display recent ideas
+        	function fetchRecentIdeas() {
+            	fetch('getRecentIdeas.php')
+                	.then(response => response.json())
+                	.then(data => {
+                    	if (data.error) {
+                        	console.error('Error:', data.error);
+                    	} else {
+                        	displayRecentIdeas(data);
+                    	}
+                	})
+                	.catch(error => console.error('Error:', error));
+        	}
+
+			function displayRecentIdeas(ideas) {
+            	const ideasList = document.getElementById('recentIdeasList');
+            	ideasList.innerHTML = ''; // Clear existing content
+
+            	ideas.forEach(idea => {
+                	const listItem = document.createElement('li');
+                	listItem.textContent = `ID: ${idea.id}, Idea: ${idea.text}, Key Category: ${idea.keycat}`;
+                	ideasList.appendChild(listItem);
+            	});
+        	}
+
+        	fetchRecentIdeas();
+			
+        });
+    </script>
+
+</div>
+</body>
+</html>

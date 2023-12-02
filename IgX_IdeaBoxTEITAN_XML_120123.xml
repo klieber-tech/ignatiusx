@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx2/IgX_Cityscape_XSL4_IdEd_Styling3.xsl"?>
+
+<Portfolio>
+    <Ideaboxes>
+        <Ideabox id="1700443300">
+            <Ideas>
+                <Idea id="1700443301">Influence of extracurricular activities on acceptance rates - correlation strength?
+                    <Keycat>Admissions Analytics</Keycat>
+                </Idea>
+                <Idea id="1700443302">Tailoring campus visit experiences using CRM data - possible personalized itineraries?
+                    <Keycat>Personalized Experiences</Keycat>
+                </Idea>
+                <Idea id="1700443303">Survey data on prospect priorities - can we map against current touchpoints?              
+                    <Keycat>Prospect Needs and Wants</Keycat>
+                </Idea>
+                <Idea id="1700443304">Sentiment trends in application essays - indicators of commitment and success post-admission?
+                    <Keycat>Sentiment Analysis</Keycat>
+                </Idea>
+                <Idea id="1700443305">Historical data vs. current applicant pool - can we refine predictive models for yield rates?
+                    <Keycat>Predictive Modeling</Keycat>
+                </Idea>
+            </Ideas>
+        </Ideabox>
+    </Ideaboxes>
+</Portfolio>
