@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IgX-IdeaBox v4.0 - Literature</title>
+	<!-- Call the ability to print to PDF -->
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+	
+	
+	<!-- Styles -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e5e5e5;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 30px;
+            background-color: white;
+        }
+        .main-content {
+            background-image: url('https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx/grid-black-pattern-yellow-glow.jpg');
+            background-size: cover;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .header-text {
+            font-size: 2em;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .sub-header-text {
+            font-size: 1.5em;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .btn-signup {
+    		background-color: orange;
+    		color: white;
+    		padding: 10px 15px;
+    		border: none;
+    		cursor: pointer;
+    		text-decoration: none;
+    		font-size: 1.2em;  
+		}
+        .features {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 100px;
+            background-color: white;
+        }
+        .feature-box {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+		.logoname-text {
+            font-size: 1.5em;
+            color: darkred;
+            margin-bottom: 20px;
+        }
+		.working-area {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 100px;
+            background-color: white;
+        }
+		.working-area-box {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+		.results-area {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 100px;
+            background-color: background: blue;
+        }
+		.results-area-box {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+		.recent-ideas {
+    		padding-left: 10px;
+		}
+	
+    </style>
+	
+
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById('researchForm');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const keywords = document.getElementById('keywords').value;
+            fetchPapers(keywords);
+        });
+
+		<!-- Change max_results to control number of returned papers -->
+        function fetchPapers(keywords) {
+            const query = encodeURIComponent(keywords);
+            const url = `http://export.arxiv.org/api/query?search_query=all:${query}&start=0&max_results=5`;
+
+            fetch(url)
+            .then(response => response.text())
+            .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+            .then(data => {
+                const entries = data.querySelectorAll("entry");
+                const paperList = document.getElementById('paperList');
+                paperList.innerHTML = '';
+                
+                entries.forEach((entry, index) => {
+                    const title = entry.querySelector("title").textContent;
+                    const summary = entry.querySelector("summary").textContent;
+                    const id = entry.querySelector("id").textContent;
+                    const published = entry.querySelector("published").textContent;
+                    const updated = entry.querySelector("updated").textContent;
+                    const author = entry.querySelector("author name").textContent;
+                    const link = entry.querySelector("link[title='pdf']").getAttribute("href");
+                    const category = entry.querySelector("category").getAttribute("term");
+                    const journalRef = entry.querySelector("journal_ref") ? entry.querySelector("journal_ref").textContent : "N/A";
+                    const comment = entry.querySelector("comment") ? entry.querySelector("comment").textContent : "N/A";
+
+                    const paperItem = document.createElement('li');
+                    paperItem.innerHTML = `
+                        <strong>Title:</strong> ${title}<br>
+                        <strong>Summary:</strong> ${summary}<br>
+                        <strong>ID:</strong> ${id}<br>
+                        <strong>Published:</strong> ${published}<br>
+                        <strong>Updated:</strong> ${updated}<br>
+                        <strong>Author:</strong> ${author}<br>
+                        <strong>Link:</strong> <a href="${link}" target="_blank">PDF</a><br>
+                        <strong>Category:</strong> ${category}<br>
+                        <strong>Journal Reference:</strong> ${journalRef}<br>
+                        <strong>Comment:</strong> ${comment}<br>
+                    `;
+                    paperList.appendChild(paperItem);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+        }
+
+        const exportPdfButton = document.getElementById('exportPdfButton');
+        exportPdfButton.addEventListener('click', function () {
+            console.log('Button clicked'); // Add this line
+            const doc = new jsPDF();
+            // Rest of your code...
+        });
+    });
+</script>
+
+	
+	
+</head>
+	
+<!-- Functionality -->
+	
+<body>
+<div class="navbar">
+    <!-- Logo Image - Wrapped in an anchor tag -->
+    <a href="IgX_IdeaBox_v4xa.html" style="display: inline-block; width: 20%;">
+        <img src="https://luc2023fall.s3.us-east-2.amazonaws.com/IgX_WorkingLogo_A82E26.png" alt="IGX Logo" style="width: 100%; height: auto;">
+    </a>
+		
+    <!-- Ideabox Text - Also wrapped in an anchor tag -->
+    <a href="IgX_IdeaBox_v4xa.html" style="text-decoration: none; color: inherit; display: inline-block;">
+        <p class="logoname-text" style="margin: 0;">Ideabox</p>
+    </a>
+
+
+        <nav>
+            <ul style="list-style-type: none; display: flex; gap: 20px;">
+                <li><a href="IgX_IdeaBox_v4xa_LogIdeas.html" style="text-decoration: none; color: #333;">LOG IDEAS</a></li>
+                <li><a href="IgX_IdeaBox_v4xa_Synergies.html" style="text-decoration: none; color: #333;">SYNERGIES</a></li>
+                <li><a href="IgX_IdeaBox_v4xa_Literature.html" style="text-decoration: none; color: #333;">LITERATURE</a></li>
+				<li><a href="IgX_IdeaBox_v4xa_HowItWorks.html" style="text-decoration: none; color: #333;">HOW IT WORKS</a></li>
+                <li><a href="IgX_IdeaBox_v4xa_Login.html" style="text-decoration: none; color: #333;">LOGIN</a></li>
+                <li><a href="#" style="text-decoration: none; color: orange; padding: 5px 10px; border: 1px solid orange;">SIGN UP</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <p class="header-text">LITERATURE</p>
+    </div>
+	
+	    <h1 class="recent-ideas">Find Relevant Research Papers Using ArXiv</h1>
+	
+	<div class="working-area">
+
+    <form id="researchForm">
+        <label for="keywords">Enter Keywords:</label>
+        <input type="text" id="keywords" name="keywords">
+        <button type="submit">Search</button>
+    </form>
+	<button id="exportPdfButton">Export to PDF</button> <!-- The new "Export to PDF" button -->
+  
+		
+	</div>
+	
+    <h2>Relevant Papers:</h2>
+    <ol id="paperList">
+    </ol>
+  
+	
+	<div class="results-area">
+
+	
+	</div>
+</body>
+</html>

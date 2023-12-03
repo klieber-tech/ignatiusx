@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IgX-IdeaBox v4.0 - Literature</title>
+		<!-- V 2.0, page 2: new subpage - Log and Work With Ideas  -->
+	
+	<!-- Styles -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e5e5e5;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 30px;
+            background-color: white;
+        }
+        .main-content {
+            background-image: url('https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx/grid-black-pattern-yellow-glow.jpg');
+            background-size: cover;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .header-text {
+            font-size: 2em;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .sub-header-text {
+            font-size: 1.5em;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .btn-signup {
+    		background-color: orange;
+    		color: white;
+    		padding: 10px 15px;
+    		border: none;
+    		cursor: pointer;
+    		text-decoration: none;
+    		font-size: 1.2em;  
+		}
+        .features {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 100px;
+            background-color: white;
+        }
+        .feature-box {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+		.logoname-text {
+            font-size: 1.5em;
+            color: darkred;
+            margin-bottom: 20px;
+        }
+		.working-area {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 100px;
+            background-color: white;
+        }
+		.working-area-box {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+		.results-area {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 100px;
+            background-color: background: blue;
+        }
+		.results-area-box {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+		.recent-ideas {
+    		padding-left: 10px;
+		}
+	
+    </style>
+	
+	 <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById('ideaSearchForm');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const keyword = document.getElementById('searchKeyword').value;
+            findIdeas(keyword);
+        });
+    });
+
+    function findIdeas(keyword) {
+        fetch('findIdeas.php?keyword=' + encodeURIComponent(keyword))
+        .then(response => response.json())
+        .then(data => {
+            const ideasDiv = document.getElementById('filteredIdeas');
+            ideasDiv.innerHTML = '';
+            data.forEach(idea => {
+                const ideaElement = document.createElement('div');
+                ideaElement.innerHTML = `
+                    <strong>Idea Text:</strong> ${idea.text}<br>
+                    <strong>Key Category:</strong> ${idea.keycat}<br>
+                    <strong>Timestamp:</strong> ${idea.timestamp}<br>
+                `;
+
+        		const boxLabelInput = document.createElement('input');
+        		boxLabelInput.type = 'text';
+        		boxLabelInput.value = idea.boxlabel || ''; // Set to empty if undefined
+
+                const saveButton = document.createElement('button');
+                saveButton.textContent = 'Save Changes';
+                saveButton.onclick = function() { saveBoxLabelEdit(idea.id, boxLabelInput.value); };
+                
+                ideaElement.appendChild(boxLabelInput);
+                ideaElement.appendChild(saveButton);
+                ideasDiv.appendChild(ideaElement);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching ideas:', error);
+        });
+    }
+
+    function saveBoxLabelEdit(ideaId, boxLabelValue) {
+		console.log("Saving: ", ideaId, boxLabelValue); // Log the values being sent
+        fetch('saveBoxLabelEdit.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: ideaId, boxlabel: boxLabelValue })
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert(data); // Alert the response from the server
+        })
+        .catch(error => console.error('Error:', error));
+    }
+</script>
+
+
+	
+	
+</head>
+	
+<!-- Functionality -->
+	
+<body>
+<div class="navbar">
+    <!-- Logo Image - Wrapped in an anchor tag -->
+    <a href="IgX_IdeaBox_v4xa.html" style="display: inline-block; width: 20%;">
+        <img src="https://luc2023fall.s3.us-east-2.amazonaws.com/IgX_WorkingLogo_A82E26.png" alt="IGX Logo" style="width: 100%; height: auto;">
+    </a>
+		
+    <!-- Ideabox Text - Also wrapped in an anchor tag -->
+    <a href="IgX_IdeaBox_v4xa.html" style="text-decoration: none; color: inherit; display: inline-block;">
+        <p class="logoname-text" style="margin: 0;">Ideabox</p>
+    </a>
+
+
+        <nav>
+            <ul style="list-style-type: none; display: flex; gap: 20px;">
+                <li><a href="IgX_IdeaBox_v4xa_LogIdeas.html" style="text-decoration: none; color: #333;">LOG IDEAS</a></li>
+                <li><a href="IgX_IdeaBox_v4xa_Synergies.html" style="text-decoration: none; color: #333;">SYNERGIES</a></li>
+                <li><a href="IgX_IdeaBox_v4xa_Literature.html" style="text-decoration: none; color: #333;">LITERATURE</a></li>
+				<li><a href="IgX_IdeaBox_v4xa_HowItWorks.html" style="text-decoration: none; color: #333;">HOW IT WORKS</a></li>
+                <li><a href="IgX_IdeaBox_v4xa_Login.html" style="text-decoration: none; color: #333;">LOGIN</a></li>
+                <li><a href="IgX_IdeaBox_v4xa_Login.html" style="text-decoration: none; color: orange; padding: 5px 10px; border: 1px solid orange;">SIGN UP</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <p class="header-text">FIND SYNERGIES</p>
+    </div>
+	
+	    <h1 class="recent-ideas">Play With Ideas!</h1>
+	
+	
+<div class="working-area">
+    <form id="ideaSearchForm">
+        <label for="searchKeyword">Enter Keyword:</label>
+        <input type="text" id="searchKeyword" name="searchKeyword">
+        <button type="submit">Find Ideas</button>
+    </form>
+    <h2>Filtered Ideas:</h2>
+<div id="filteredIdeas">
+    <!-- Filtered ideas will be displayed here along with edit functionality -->
+</div>
+</div>
+
+
+	
+	<div class="results-area">
+
+	
+
+	</div>
+</body>
+</html>

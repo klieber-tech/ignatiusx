@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IgX-IdeaBox v4.0 - Login</title>
+		<!-- V 2.0, page 2: new subpage - Log and Work With Ideas  -->
+	
+	<!-- Styles -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e5e5e5;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 30px;
+            background-color: white;
+        }
+        .main-content {
+            background-image: url('https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx/grid-black-pattern-yellow-glow.jpg');
+            background-size: cover;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .header-text {
+            font-size: 2em;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .sub-header-text {
+            font-size: 1.5em;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .btn-signup {
+    		background-color: orange;
+    		color: white;
+    		padding: 10px 15px;
+    		border: none;
+    		cursor: pointer;
+    		text-decoration: none;
+    		font-size: 1.2em;  
+		}
+        .features {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 100px;
+            background-color: white;
+        }
+        .feature-box {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+		.logoname-text {
+            font-size: 1.5em;
+            color: darkred;
+            margin-bottom: 20px;
+        }
+		.working-area {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 100px;
+            background-color: white;
+        }
+		.working-area-box {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+		.results-area {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 100px;
+            background-color: background: blue;
+        }
+		.results-area-box {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+		
+        .login-form {
+            background-color: white;
+            padding: 20px;
+            margin: 50px auto;
+            width: 300px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .login-form input[type="email"], .login-form input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: orange;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+        }
+        .login-form button:hover {
+            background-color: darkorange;
+        }
+	
+    </style>
+	
+	 <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById('researchForm');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const keywords = document.getElementById('keywords').value;
+                fetchPapers(keywords);
+            });
+        });
+
+        function fetchPapers(keywords) {
+            const query = encodeURIComponent(keywords);
+            const url = `http://export.arxiv.org/api/query?search_query=all:${query}&start=0&max_results=3`;
+			
+            
+            fetch(url)
+            .then(response => response.text())
+            .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+            .then(data => {
+                const entries = data.querySelectorAll("entry");
+                const paperList = document.getElementById('paperList');
+                paperList.innerHTML = '';
+                
+                entries.forEach((entry, index) => {
+                    const title = entry.querySelector("title").textContent;
+                    const summary = entry.querySelector("summary").textContent;
+                    const id = entry.querySelector("id").textContent;
+                    const published = entry.querySelector("published").textContent;
+                    const updated = entry.querySelector("updated").textContent;
+                    const author = entry.querySelector("author name").textContent;
+                    const link = entry.querySelector("link[title='pdf']").getAttribute("href");
+                    const category = entry.querySelector("category").getAttribute("term");
+                    const journalRef = entry.querySelector("journal_ref") ? entry.querySelector("journal_ref").textContent : "N/A";
+                    const comment = entry.querySelector("comment") ? entry.querySelector("comment").textContent : "N/A";
+
+                    const paperItem = document.createElement('li');
+                    paperItem.innerHTML = `
+                        <strong>Title:</strong> ${title}<br>
+                        <strong>Summary:</strong> ${summary}<br>
+                        <strong>ID:</strong> ${id}<br>
+                        <strong>Published:</strong> ${published}<br>
+                        <strong>Updated:</strong> ${updated}<br>
+                        <strong>Author:</strong> ${author}<br>
+                        <strong>Link:</strong> <a href="${link}" target="_blank">PDF</a><br>
+                        <strong>Category:</strong> ${category}<br>
+                        <strong>Journal Reference:</strong> ${journalRef}<br>
+                        <strong>Comment:</strong> ${comment}<br>
+                    `;
+                    paperList.appendChild(paperItem);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+        }
+    </script>
+	
+	
+</head>
+	
+<!-- Functionality -->
+	
+<body>
+<div class="navbar">
+    <!-- Logo Image - Wrapped in an anchor tag -->
+    <a href="IgX_IdeaBox_v4xa.html" style="display: inline-block; width: 20%;">
+        <img src="https://luc2023fall.s3.us-east-2.amazonaws.com/IgX_WorkingLogo_A82E26.png" alt="IGX Logo" style="width: 100%; height: auto;">
+    </a>
+		
+    <!-- Ideabox Text - Also wrapped in an anchor tag -->
+    <a href="IgX_IdeaBox_v4xa.html" style="text-decoration: none; color: inherit; display: inline-block;">
+        <p class="logoname-text" style="margin: 0;">Ideabox</p>
+    </a>
+
+
+        <nav>
+            <ul style="list-style-type: none; display: flex; gap: 20px;">
+                <li><a href="IgX_IdeaBox_v4xa_LogIdeas.html" style="text-decoration: none; color: #333;">LOG IDEAS</a></li>
+                <li><a href="IgX_IdeaBox_v4xa_Synergies.html" style="text-decoration: none; color: #333;">SYNERGIES</a></li>
+                <li><a href="IgX_IdeaBox_v4xa_Literature.html" style="text-decoration: none; color: #333;">LITERATURE</a></li>
+				<li><a href="IgX_IdeaBox_v4xa_HowItWorks.html" style="text-decoration: none; color: #333;">HOW IT WORKS</a></li>
+                <li><a href="#" style="text-decoration: none; color: #333;">LOGIN</a></li>
+                <li><a href="#" style="text-decoration: none; color: orange; padding: 5px 10px; border: 1px solid orange;">SIGN UP</a></li>
+            </ul>
+        </nav>
+    </div>
+
+	
+	
+    <div class="main-content">
+        <p class="header-text">Login to IgX-IdeaBox</p>
+
+<!-- Login Form -->
+<div class="login-form">
+    <form method="post" action="login.php">
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+</div>
+<p class="header-text">Don't have an account yet? <a href="signup.html">Sign Up</a> now!</p>
+</div>
+
+	
+
+</body>
+</html>
