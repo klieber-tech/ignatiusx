@@ -1,0 +1,221 @@
+<?php
+session_start();
+$_SESSION['keycat'] = 'Admissions Analytics';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IgX-IdeaBox v4.0 - Ideaworking</title>
+		<!-- V 2.0, page 2: new subpage - Log and Work With Ideas  -->
+	
+	<!-- Styles -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e5e5e5;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 30px;
+            background-color: white;
+        }
+        .main-content {
+            background-image: url('https://luc2023fall.s3.us-east-2.amazonaws.com/ignatiusx/grid-black-pattern-yellow-glow.jpg');
+            background-size: cover;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .header-text {
+            font-size: 2em;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .sub-header-text {
+            font-size: 1.5em;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .btn-signup {
+    		background-color: orange;
+    		color: white;
+    		padding: 10px 15px;
+    		border: none;
+    		cursor: pointer;
+    		text-decoration: none;
+    		font-size: 1.2em;  
+		}
+        .features {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 100px;
+            background-color: white;
+        }
+        .feature-box {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+		.logoname-text {
+            font-size: 1.5em;
+            color: darkred;
+            margin-bottom: 20px;
+        }
+		.working-area {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 100px;
+            background-color: white;
+        }
+		.working-area-box {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+		.results-area {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 100px;
+            background-color: background: blue;
+        }
+		.results-area-box {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+		.recent-ideas {
+    		padding-left: 10px;
+		}
+		#filteredIdeas {
+    		margin-left: 15px;
+		}
+		.xml-display-container {
+   			width: 90%; /* Adjust width as needed */
+    		margin: auto; /* Center the div if you want */
+    		border: 1px solid #ddd; /* Optional border for the container */
+    		padding: 10px; /* Optional padding */
+    		overflow: auto; /* In case content overflows */
+		}
+		
+		.xml-file-opener {
+    		text-align: left; /* Center-align the button */
+    		margin: 20px; /* Add some margin around the div */
+    		/* Additional styling as needed */
+}
+
+	
+    </style>
+	
+	<script>
+    // Function to apply XSLT transformation
+    function applyXSLT() {
+        // Load the XSLT stylesheet
+        var xsltProcessor = new XSLTProcessor();
+		var xsltURL = "IgX_Styling_filterIdeas1.xsl"; // Update with the correct path
+		var xmlURL = "IgX_IdeaBox.xml"; // Update with the correct path to your XML data
+
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", xsltURL, true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var xslStylesheet = xhr.responseXML;
+                xsltProcessor.importStylesheet(xslStylesheet);
+
+                // Load the XML data
+                var xmlURL = "IgX_IdeaBox.xml"; // Update with the correct path to your XML data
+                var xmlDoc = new XMLHttpRequest();
+                xmlDoc.open("GET", xmlURL, true);
+                xmlDoc.onreadystatechange = function () {
+                    if (xmlDoc.readyState == 4 && xmlDoc.status == 200) {
+                        var xmlData = xmlDoc.responseXML;
+
+                        // Apply the transformation and display the result
+                        var transformedData = xsltProcessor.transformToDocument(xmlData);
+                        var serializer = new XMLSerializer();
+                        var transformedXML = serializer.serializeToString(transformedData);
+
+                        // Update the content of your Portfolio element with the transformed XML
+                        document.getElementById("Portfolio").innerHTML = transformedXML;
+                    }
+                };
+                xmlDoc.send();
+            }
+        };
+        xhr.send();
+    }
+
+    // Add a click event listener to the button
+    document.getElementById("filterButton").addEventListener("click", applyXSLT);
+</script>
+
+
+
+	
+	
+</head>
+	
+<!-- Functionality -->
+	
+<body>
+<div class="navbar">
+    <!-- Logo Image - Wrapped in an anchor tag -->
+    <a href="IgX_IdeaBox_v4xa.html" style="display: inline-block; width: 20%;">
+        <img src="https://luc2023fall.s3.us-east-2.amazonaws.com/IgX_WorkingLogo_A82E26.png" alt="IGX Logo" style="width: 100%; height: auto;">
+    </a>
+		
+    <!-- Ideabox Text - Also wrapped in an anchor tag -->
+    <a href="IgX_IdeaBox_v4xa.html" style="text-decoration: none; color: inherit; display: inline-block;">
+        <p class="logoname-text" style="margin: 0;">Ideabox</p>
+    </a>
+
+
+        <nav>
+            <ul style="list-style-type: none; display: flex; gap: 20px;">
+                <li><a href="IgX_IdeaBox_v4xa_LogIdeas.html" style="text-decoration: none; color: #333;">LOG IDEAS</a></li>
+                <li><a href="IgX_IdeaBox_v4xa_Synergies.html" style="text-decoration: none; color: #333;">SYNERGIES</a></li>
+				<li><a href="IgX_IdeaBox_v4xa_Ideaworking.html" style="text-decoration: none; color: #333;">XML</a></li>
+                <li><a href="IgX_IdeaBox_v4xa_Literature.html" style="text-decoration: none; color: #333;">LITERATURE</a></li>
+				<li><a href="IgX_IdeaBox_v4xa_About.html" style="text-decoration: none; color: #333;">ABOUT</a></li>
+                <li><a href="IgX_IdeaBox_v4xa_Login.html" style="text-decoration: none; color: #333;">LOGIN</a></li>
+                <li><a href="IgX_IdeaBox_v4xa_Login.html" style="text-decoration: none; color: orange; padding: 5px 10px; border: 1px solid orange;">SIGN UP</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <p class="header-text">IDEAWORKING</p>
+    </div>
+	
+	    <h1 class="recent-ideas">Engage Your Ideas With XML Transformations</h1>
+	
+	
+<div class="working-area">
+    <div>
+        <h2>XML Commands [Beta]:</h2>
+    </div>
+    <div class="xml-file-opener">
+        <!-- Button to open XML file -->
+        <button style="width: 200px; background-color: orange; color: white; font-weight: bold;" onclick="window.open('IgX_IdeaBoxDB_noXSLT.xml', '_blank')">Open XML File</button>
+        
+        <!-- Button to filter ideas -->
+        <button onclick="window.open('filterIdeas.php', '_blank')">Filter Ideas</button>
+
+    </div>
+</div>
+	
+
+
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="IgX_IdeaBox_allTransformations.xsl"?><Portfolio>
+    <Ideaboxes>
+        <Ideabox id="1">
+            <Boxname>Uncurated Box</Boxname>
+            <Boxlevel_Metadata>BoxMeta</Boxlevel_Metadata>
+            <Ideas><Idea id="1700443301005">Influence of extracurricular activities on acceptance rates - correlation strength?
+                    <Keycat>Admissions Analytics</Keycat>
+                	<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+                	<boxlabel>stuff</boxlabel>
+                	<Ideanotes>Analyze sentiment trends in application essays to gauge commitment and post-admission success.</Ideanotes>	
+                </Idea><Idea id="1700443302004">Tailoring campus visit experiences using CRM data - possible personalized itineraries?
+                	<Keycat>Admissions Analytics</Keycat>
+                	<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+                	<boxlabel/>
+                	<Ideanotes>Could use R studio?</Ideanotes>
+                </Idea><Idea id="1700443303003">Survey data on prospect priorities - can we map against current touchpoints?
+                	<Keycat>Admissions Analytics</Keycat>
+                	<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+                	<boxlabel/>
+                	<Ideanotes>Could use R studio?</Ideanotes>
+                </Idea><Idea id="1700443304002">Sentiment trends in application essays - indicators of commitment and success post-admission?
+                	<Keycat>Admissions Analytics</Keycat>
+                	<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+                	<boxlabel/>
+                	<Ideanotes>Could use R studio?</Ideanotes>
+                </Idea><Idea id="1700443305001">Historical data vs. current applicant pool - can we refine predictive models for yield rates?
+                	<Keycat>Admissions Analytics</Keycat>
+                	<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+                	<boxlabel/>
+                	<Ideanotes>Could use R studio?</Ideanotes>
+                </Idea><Idea id="1701482483133">Impact of application timing on acceptance - early birds vs. regular.
+                	<Keycat>Admissions Analytics</Keycat>
+                	<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+                	<boxlabel/>
+                	<Ideanotes>Could use R studio?</Ideanotes>
+                </Idea><Idea id="1701482517652">Geographic trends in admissions data - urban vs. rural success rates.
+                	<Keycat>Admissions Analytics</Keycat>
+                	<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+                	<boxlabel/>
+                	<Ideanotes>Could use R studio?</Ideanotes>
+                </Idea><Idea id="1701482990606">Give out free potatoes with the school's name on them. 
+			    	<Keycat>Admissions Analytics</Keycat>
+			    	<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+			    	<boxlabel/>
+			    	<Ideanotes>Could use R studio?</Ideanotes>
+			    </Idea><Idea id="1701483071107">Keyword is amazingness of the data, super duper lovely!
+					<Keycat>Admissions Analytics</Keycat>
+					<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+					<boxlabel/>
+					<Ideanotes>Could use R studio?</Ideanotes>
+				</Idea><Idea id="1701483101524">I love new ideas and I love making new ideas!
+					<Keycat>Admissions Analytics</Keycat>
+					<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+					<boxlabel/>
+					<Ideanotes>Could use R studio?</Ideanotes>
+				</Idea><Idea id="1701483265056">Meanwhile, back at the ranch, Lassie was saving the town yet again.
+					<Keycat>Admissions Analytics</Keycat>
+					<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+					<boxlabel/>
+					<Ideanotes>Could use R studio?</Ideanotes>
+				</Idea><Idea id="1701483322055">The quick brown fox jumped over the lazy dog to get to the pizza.
+					<Keycat>Admissions Analytics</Keycat>
+					<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+					<boxlabel>oh my, what an idea</boxlabel>
+					<Ideanotes>Could use R studio?</Ideanotes>
+				</Idea><Idea id="1701483366119">The pizza was both amazing and delicious.
+					<Keycat>Admissions Analytics</Keycat>
+					<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+					<boxlabel>the pizza was nice and hot</boxlabel>
+					<Ideanotes>Could use R studio?</Ideanotes>
+				</Idea><Idea id="1701483379900">The delicious pizza won awards at various food events.
+					<Keycat>Admissions Analytics</Keycat>
+					<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+					<boxlabel/>
+					<Ideanotes>Could use R studio?</Ideanotes>
+				</Idea></Ideas>
+        </Ideabox>
+    </Ideaboxes>
+</Portfolio>
