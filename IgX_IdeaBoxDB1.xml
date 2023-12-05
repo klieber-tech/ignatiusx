@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="IgX_IdeaBox_allTransformations.xsl"?>
+<Portfolio>
+    <Ideaboxes>
+        <Ideabox id="1">
+            <Boxname>Uncurated Box</Boxname>
+            <Ideas>
+                <Idea id="1700443301005">Influence of extracurricular activities on acceptance rates - correlation strength?
+                    <Keycat>Admissions Analytics</Keycat>
+                	<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+                	<boxlabel>Paper on predictive analytics based on sentiment</boxlabel>
+                	<Ideanotes>Analyze sentiment trends in application essays to gauge commitment and post-admission success.</Ideanotes>	
+                </Idea>
+                <Idea id="1700443302004">Tailoring campus visit experiences using CRM data - possible personalized itineraries?
+                	<Keycat>Admissions Analytics</Keycat>
+                	<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+                	<boxlabel>Paper on predictive analytics based on sentiment</boxlabel>
+                	<Ideanotes>Personalize real or virtual campus data based on interaction.</Ideanotes>
+                </Idea>
+                <Idea id="1700443303003">Survey data on prospect priorities - can we map against current touchpoints?
+                	<Keycat>Admissions Analytics</Keycat>
+                	<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+                	<boxlabel>Discussion on predictive analytics based on sentiment</boxlabel>
+                	<Ideanotes>Use surveys to determine which media touch points work most effectively.</Ideanotes>
+                </Idea>
+                <Idea id="1700443304002">Sentiment trends in application essays - indicators of commitment and success post-admission?
+                	<Keycat>Admissions Analytics</Keycat>
+                	<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+                	<boxlabel>Discussion on predictive analytics based on sentiment</boxlabel>
+                	<Ideanotes>Use sentiment analysis in various ways, see if you can unearth nuances.</Ideanotes>
+                </Idea>
+                <Idea id="1700443305001">Historical data vs. current applicant pool - can we refine predictive models for yield rates?
+                	<Keycat>Admissions Analytics</Keycat>
+                	<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+                	<boxlabel>Paper on refining models</boxlabel>
+                	<Ideanotes>Further use of predictive models.</Ideanotes>
+                </Idea>
+                <Idea id="1701482483133">Impact of application timing on acceptance - early birds vs. regular.
+                	<Keycat>Admissions Analytics</Keycat>
+                	<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+                	<boxlabel>Paper on refining models</boxlabel>
+                	<Ideanotes>Modeling based on timeframes.</Ideanotes>
+                </Idea>
+                <Idea id="1701482517652">Geographic trends in admissions data - urban vs. rural success rates.
+                	<Keycat>Admissions Analytics</Keycat>
+                	<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+                	<boxlabel>Paper on refining models</boxlabel>
+                	<Ideanotes>Modeling based on geographic disposition.</Ideanotes>
+                </Idea>
+            	<Idea id="1701482990606">In addition to gauging commitment and post-admission success, we can explore using Natural Language Processing (NLP) models like BERT or GPT-4 for a more nuanced analysis. 
+			    	<Keycat>Admissions Analytics</Keycat>
+			    	<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+			    	<boxlabel>Paper on potatoes in analytics</boxlabel>
+            		<Ideanotes>In addition to gauging commitment and post-admission success, we can explore using Natural Language Processing (NLP) models like BERT or GPT-4 for a more nuanced analysis.</Ideanotes>
+			    </Idea>
+				<Idea id="1701483071107">Keyword is amazingness of the data, super duper lovely!
+					<Keycat>Admissions Analytics</Keycat>
+					<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+					<boxlabel>Paper on potatoes in analytics</boxlabel>
+					<Ideanotes>Could use R studio?</Ideanotes>
+				</Idea>
+				<Idea id="1701483101524">I love new ideas and I love making new ideas!
+					<Keycat>Admissions Analytics</Keycat>
+					<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+					<boxlabel>Paper on potatoes in analytics</boxlabel>
+					<Ideanotes>Could use R studio?</Ideanotes>
+				</Idea>
+				<Idea id="1701483265056">Meanwhile, back at the ranch, Lassie was saving the town yet again.
+					<Keycat>Admissions Analytics</Keycat>
+					<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+					<boxlabel>Paper on potatoes in analytics</boxlabel>
+					<Ideanotes>Could use R studio?</Ideanotes>
+				</Idea>		
+				<Idea id="1701483322055">The quick brown fox jumped over the lazy dog to get to the pizza.
+					<Keycat>Admissions Analytics</Keycat>
+					<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+					<boxlabel>oh my, what an idea</boxlabel>
+					<Ideanotes>Could use R studio?</Ideanotes>
+				</Idea>		
+				<Idea id="1701483366119">The pizza was both amazing and delicious.
+					<Keycat>Admissions Analytics</Keycat>
+					<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+					<boxlabel>the pizza was nice and hot</boxlabel>
+					<Ideanotes>Could use R studio?</Ideanotes>
+				</Idea>	
+				<Idea id="1701483379900">The delicious pizza won awards at various food events.
+					<Keycat>Admissions Analytics</Keycat>
+					<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+					<boxlabel>the pizza was nice and hot</boxlabel>
+					<Ideanotes>Could use R studio?</Ideanotes>
+				</Idea>	
+				<Idea id="1701485505660">The quick pizza jumped over the amazing brown dog.
+					<Keycat>Pizza Stories</Keycat>
+					<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+					<boxlabel>the pizza was nice and hot</boxlabel>
+					<Ideanotes>Could use R studio?</Ideanotes>
+				</Idea>
+				<Idea id="1701485527368">The pepperoni was analytical and met all cybersecurity requirements.
+					<Keycat>Cyber Pepperoni</Keycat>
+					<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+					<boxlabel>a wild thought!</boxlabel>
+					<Ideanotes>Could use R studio?</Ideanotes>
+				</Idea>
+				<Idea id="1701485995524">The cyber-pepperoni could go well with cyber-anchovies.
+					<Keycat>Cyber Pepperoni</Keycat>
+					<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+					<boxlabel/>
+					<Ideanotes>Could use R studio?</Ideanotes>
+				</Idea>
+				<Idea id="1701486185316">The cyber anchovies are able to use John the Ripper to crack passcodes.
+					<Keycat>Cyber Pepperoni</Keycat>
+					<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+					<boxlabel>the pizza was nice and hot</boxlabel>
+					<Ideanotes>Could use R studio?</Ideanotes>
+				</Idea>
+			<Idea id="1701486344595">The passcodes include those from the Rockyou list, oh my.
+				<Keycat>Cyber Pepperoni</Keycat>
+				<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+				<boxlabel>Paper on the use of pepperoni in cybersecurity</boxlabel>
+				<Ideanotes>Could use R studio?</Ideanotes>
+			</Idea>
+			<Idea id="1701486510259">Passcode pepperoni cheese and sausage
+				<Keycat>Cyberpizza</Keycat>
+				<TimestampCreated>12/03/2023 12:45:28</TimestampCreated>
+				<boxlabel>Paper on the use of pepperoni in cybersecurity</boxlabel>
+				<Ideanotes>Could use R studio?</Ideanotes>
+			</Idea>
+			<Idea id="1701486857623">Cyber pepperoni is amazing stuff, we love it.
+				<Keycat>Cyberpizza</Keycat>
+				<TimestampCreated>12/02/2023 04:14:17</TimestampCreated>
+				<boxlabel>Paper on the use of pepperoni in cybersecurity</boxlabel>
+				<Ideanotes>Could use R studio?</Ideanotes>
+			</Idea>
+			<Idea id="1701487288253">The superb pizza wins the security prize for its amazingness. 
+				<Keycat>Cyberpizza</Keycat>
+				<TimestampCreated>12/02/2023 04:21:28</TimestampCreated>
+				<boxlabel>Paper on the use of pepperoni in cybersecurity</boxlabel>
+				<Ideanotes>Could use R studio?</Ideanotes>
+			</Idea>
+			<Idea id="1701490272188">This quick brown fox is having pizza and a few cocktails using our cocktail API!
+				<Keycat>Cocktail Cybersecurity</Keycat>
+				<TimestampCreated>12/02/2023 05:14:38</TimestampCreated>
+				<boxlabel>superb</boxlabel>
+				<Ideanotes>Notes go here</Ideanotes>
+			</Idea>
+			<Idea id="1701490478170">The pizza flying above the city hovered, waiting for its time to enjoy a good beer.
+				<Keycat>Pizza Cybersecurity</Keycat>
+				<TimestampCreated>12/02/2023 05:14:38</TimestampCreated>
+				<boxlabel>superb</boxlabel>
+				<Ideanotes>Notes go here</Ideanotes>
+			</Idea>
+			<Idea id="1701561236131">The tasty pizza was well-fired up in a tasty hot stone oven.
+				<Keycat>Pizza Cybersecurity</Keycat>
+				<TimestampCreated>12/03/2023 00:53:56</TimestampCreated>
+				<boxlabel>pizza is excellent both hot and cold</boxlabel>
+				<Ideanotes>Lots of notes about pizza</Ideanotes>
+			</Idea>
+			<Idea id="1701561297070">The tasty pizza in the hot stone oven was covered in pepperoni.
+				<Keycat>Cyberpizza</Keycat>
+				<TimestampCreated>12/03/2023 00:54:57</TimestampCreated>
+				<boxlabel>superb</boxlabel>
+				<Ideanotes>No notes, move along!</Ideanotes>
+			</Idea>
+           </Ideas>
+        </Ideabox>
+    </Ideaboxes>
+</Portfolio>
